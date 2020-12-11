@@ -1,14 +1,14 @@
-# Code <br>
-[Meet the Team](https://github.com/stmcf/code-br-/blob/main/README.md#Code<br>, Team!) | [Tech Stack](https://github.com/stmcf/code-br-/blob/main/README.md#tech-stack) | [Using Code<br>](https://github.com/stmcf/code-br-/blob/main/README.md#using-code<br>) | [Additional Information](https://github.com/stmcf/code-br-/blob/main/README.md#additional-information)
+# CodeBreak
+[Meet the Team](https://github.com/stmcf/code-br-/blob/main/README.md#Code<br>, Team!) | [Tech Stack](https://github.com/stmcf/code-br-/blob/main/README.md#tech-stack) | [Using CodeBreak](https://github.com/stmcf/code-br-/blob/main/README.md#using-code<br>) | [Additional Information](https://github.com/stmcf/code-br-/blob/main/README.md#additional-information)
 
 
 
 
-# Code<br>, Team!
+# CodeBreak, Team!
 
 [Alan Parley](https://github.com/AlanParley) ----- [Matthew McCoach](https://github.com/mjmccoach) ------ [Paul Donegan](https://github.com/fatpav) ------ [Steven McFarlane](https://github.com/stmcf)
 
-Team! and the Code<br> project are the final Full Stack project for the [CodeClan](https://codeclan.com) Full stack Software Dev programme as a part of the September 2020 E43 cohort. 
+The CodeBreak project is the final Full Stack project for the [CodeClan](https://codeclan.com) Full stack Software Dev programme as a part of the September 2020 E43 cohort. 
 
 ## Group goals
 
@@ -49,7 +49,7 @@ Backend fully unit tested using JUnit4
 
 ### Categories and Cost
 
-# Using Code<br>
+# Using CodeBreak
 
 
 # Additional Information
