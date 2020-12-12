@@ -5,6 +5,8 @@ import Journal from './components/Journal';
 import Breathing from './Breathing';
 import Activities from './components/Activities';
 import Mood from './components/Mood';
+import Sleep from './components/Sleep';
+import Tracker from './components/Tracker';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Breathing></Breathing>
       <Activities></Activities>
       <Mood></Mood>
+      <Sleep></Sleep>
+      <Tracker></Tracker>
      
     </div>
   );
