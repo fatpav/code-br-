@@ -1,11 +1,13 @@
-import navBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import StartScreen from './components/StartScreen'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
 
-      <navBar/>
+      <NavBar></NavBar>
+      <StartScreen></StartScreen>
      
     </div>
   );
