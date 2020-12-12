@@ -7,6 +7,7 @@ import Activities from './components/Activities';
 import Mood from './components/Mood';
 import Sleep from './components/Sleep';
 import Tracker from './components/Tracker';
+import Stats from './components/Stats';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Mood></Mood>
       <Sleep></Sleep>
       <Tracker></Tracker>
+      <Stats></Stats>
      
     </div>
   );
