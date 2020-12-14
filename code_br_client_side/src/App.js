@@ -14,6 +14,8 @@ import Meditate from './components/Exercises/Meditate';
 import Inspire from './components/Exercises/Inspire';
 import Yoga from './components/Exercises/Yoga';
 import Detail from './components/Detail'
+import WaterIntake from './components/Inputs/WaterIntake';
+import Screentime from './components/Inputs/Screentime';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/sleep" component={Sleep}/>
             <Route path="/detail" component={Detail}/>
             <Route path="/tracker" component={Tracker}/>
+            <Route path="/waterintake" component={WaterIntake}/>
+            <Route path="/screentime" component={Screentime}/>
           </Switch>  
         </>
       </Router>

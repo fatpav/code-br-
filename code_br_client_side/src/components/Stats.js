@@ -14,9 +14,19 @@ const Stats = () => {
                 <button>Mood</button>
             </Link>
 
-            <Link to="/detail">
+            <Link to="/waterintake">
+                <button>Water Intake</button>
+            </Link>
+
+            <Link to= "/screentime">
+                <button>Screentime</button>
+            </Link>
+
+
+            <Link to= "/detail">
                 <button>Detail</button>
             </Link>
+
 
             <Link to= "/tracker">
                 <button>Tracker</button>
