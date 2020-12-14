@@ -4,16 +4,17 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
 import './App.css';
-import Journal from './components/Journal';
+import Journal from './components/Inputs/Journal';
 import Breathe from './components/Exercises/Breathe';
 import Activities from './components/Activities';
-import Mood from './components/Mood';
-import Sleep from './components/Sleep';
+import Mood from './components/Inputs/Mood';
+import Sleep from './components/Inputs/Sleep';
 import Tracker from './components/Tracker';
 import Stats from './components/Stats';
 import Meditate from './components/Exercises/Meditate';
 import Inspire from './components/Exercises/Inspire';
 import Yoga from './components/Exercises/Yoga';
+import Detail from './components/Detail'
 
 
 function App() {
@@ -30,9 +31,11 @@ function App() {
             <Route path="/yoga" component={Yoga}/>
             <Route path="/inspire" component={Inspire}/>
             <Route path="/breathe" component={Breathe}/>
+            <Route path="/mood" component={Mood}/>
+            <Route path="/sleep" component={Sleep}/>
+            <Route path="/detail" component={Detail}/>
+            <Route path="/tracker" component={Tracker}/>
           </Switch>  
-        
-        {/* <StartScreen></StartScreen> */}
         </>
       </Router>
   );
