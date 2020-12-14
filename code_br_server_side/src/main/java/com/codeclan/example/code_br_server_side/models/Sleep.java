@@ -18,8 +18,8 @@ public class Sleep {
     @Column(name = "hours")
     private int hours;
 
-    @JsonIgnoreProperties({"hours"})
-    @OneToOne (mappedBy = "hours", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"sleep"})
+    @OneToOne (mappedBy = "sleep", fetch = FetchType.LAZY)
     private DiaryEntry diaryEntry;
 
 
