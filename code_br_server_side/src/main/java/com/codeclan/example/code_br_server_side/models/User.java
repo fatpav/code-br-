@@ -90,4 +90,11 @@ public class User {
     public void setDiaryEntries(List<DiaryEntry> diaryEntries) {
         this.diaryEntries = diaryEntries;
     }
+
+    public void addJournalEntry(Journal journal){
+        this.journal.add(journal);
+    }
+    public void addDiaryEntry(DiaryEntry diaryEntry){
+        this.diaryEntries.add(diaryEntry);
+    }
 }
