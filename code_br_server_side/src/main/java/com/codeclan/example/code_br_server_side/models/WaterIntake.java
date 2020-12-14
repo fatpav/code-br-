@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-@Table(name="water")
+@Table(name="waterIntake")
 
 public class WaterIntake {
 
@@ -19,12 +19,13 @@ public class WaterIntake {
     @Column(name = "litres")
     private double litres;
 
-//    @JsonIgnoreProperties ({"water"})
-//    @OneToOne (mappedBy = "water", fetch = FetchType.LAZY)
-//    private DiaryEntry diaryEntry;
+    @JsonIgnoreProperties ({"waterIntake"})
+    @OneToOne (mappedBy = "waterIntake", fetch = FetchType.LAZY)
+    private DiaryEntry diaryEntry;
 
-    public WaterIntake(double litres) {
+    public WaterIntake(double litres, DiaryEntry diaryEntry) {
         this.litres = litres;
+        this.diaryEntry = diaryEntry;
     }
 
     public WaterIntake (){}

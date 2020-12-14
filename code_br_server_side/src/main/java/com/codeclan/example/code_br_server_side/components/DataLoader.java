@@ -24,6 +24,8 @@ public class DataLoader implements ApplicationRunner {
     MeditationRepository meditationRepository;
     @Autowired
     ScreenTimeRepository screenTimeRepository;
+    @Autowired
+    WaterIntakeRepository waterIntakeRepository;
 
     public DataLoader(){}
 
@@ -56,6 +58,11 @@ public class DataLoader implements ApplicationRunner {
         screenTimeRepository.save(screenTime1);
         entry1.setScreenTime(screenTime1);
 
+        WaterIntake water1 = new WaterIntake(1.5, entry1);
+        waterIntakeRepository.save(water1);
+        entry1.setWaterIntake(water1);
+
+
         diaryEntryRepository.save(entry1);
         //        Sleep sleepTest2 = new Sleep(7);
 //        sleepRepository.save(sleepTest2);
@@ -64,8 +71,7 @@ public class DataLoader implements ApplicationRunner {
 //        Sleep sleepTest4 = new Sleep(4);
 //        sleepRepository.save(sleepTest4);
 //
-//        ScreenTime screenTime1 = new ScreenTime(8);
-//        screenTimeRepository.save(screenTime1);
+//
 //        ScreenTime screenTime2 = new ScreenTime(2);
 //        screenTimeRepository.save(screenTime2);
 //        ScreenTime screenTime3 = new ScreenTime(12);

@@ -33,10 +33,11 @@ public class DiaryEntry {
     @JsonIgnoreProperties({"diary_entries"})
     private ScreenTime screenTime;
 
-//    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
-//    @JoinColumn(name="water_id", referencedColumnName = "id")
-//    @JsonIgnoreProperties({"diary_entries"})
-//    private WaterIntake waterIntake;
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name="waterIntake_id", referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
+    private WaterIntake waterIntake;
+
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @JsonIgnoreProperties({"diary_entries"})
@@ -52,7 +53,7 @@ public class DiaryEntry {
         this.sleep = null;
         this.meditation = null;
         this.screenTime = null;
-//        this.waterIntake = null;
+        this.waterIntake = null;
         this.breathing = null;
         this.user = null;
     }
@@ -99,14 +100,14 @@ public class DiaryEntry {
         this.screenTime = screenTime;
     }
 
-//    public WaterIntake getWaterIntake() {
-//        return waterIntake;
-//    }
-//
-//    public void setWaterIntake(WaterIntake waterIntake) {
-//        this.waterIntake = waterIntake;
-//    }
-//
+    public WaterIntake getWaterIntake() {
+        return waterIntake;
+    }
+
+    public void setWaterIntake(WaterIntake waterIntake) {
+        this.waterIntake = waterIntake;
+    }
+
     public Breathing getBreathing() {
         return breathing;
     }
