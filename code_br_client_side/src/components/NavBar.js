@@ -1,6 +1,28 @@
+import reactRouter from 'react-router-dom'
+import React from 'react'
+import {Link} from 'react-router-dom'
+
 const NavBar = () => {
     return(
-        <h1>Hello, J'ai suis votre Nav Bar</h1>
+        <>
+        <ul>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+
+            <li>
+                <Link to="/journal">Journal</Link>
+            </li>
+
+            <li>
+                <Link to="/activities">Activities</Link>
+            </li>
+
+            <li>
+                <Link to="/mystats">My Stats</Link>
+            </li>
+        </ul>
+        </>  
     )
 }
 
