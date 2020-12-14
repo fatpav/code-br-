@@ -19,9 +19,9 @@ public class WaterIntake {
     @Column(name = "litres")
     private double litres;
 
-    @JsonIgnoreProperties ({"water"})
+//    @JsonIgnoreProperties ({"water"})
 //    @OneToOne (mappedBy = "water", fetch = FetchType.LAZY)
-    private DiaryEntry diaryEntry;
+//    private DiaryEntry diaryEntry;
 
     public WaterIntake(double litres) {
         this.litres = litres;

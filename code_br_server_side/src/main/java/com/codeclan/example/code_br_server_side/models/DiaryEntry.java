@@ -17,16 +17,16 @@ public class DiaryEntry {
     @Column(name="date")
     private String date;
 
-//
-//    @JoinColumn(name="sleep_id", referencedColumnName = "id")
-//    @OneToOne (cascade = CascadeType.ALL)
-//    @JsonIgnoreProperties({"diary_entries"})
-//    private Sleep sleep;
-//
-//    @OneToOne (cascade = CascadeType.ALL)
-//    @JoinColumn(name="meditation_id", referencedColumnName = "id")
-//    @JsonIgnoreProperties({"diary_entries"})
-//    private Meditation meditation;
+
+    @JoinColumn(name="sleep_id", referencedColumnName = "id")
+    @OneToOne (cascade = CascadeType.ALL)
+    @JsonIgnoreProperties({"diary_entries"})
+    private Sleep sleep;
+
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name="meditation_id", referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
+    private Meditation meditation;
 //
 //    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
 //    @JoinColumn(name="screenTime_id", referencedColumnName = "id")
@@ -50,8 +50,8 @@ public class DiaryEntry {
 
     public DiaryEntry(String date) {
         this.date = date;
-//        this.sleep = null;
-//        this.meditation = null;
+        this.sleep = null;
+        this.meditation = null;
 //        this.screenTime = null;
 //        this.waterIntake = null;
         this.breathing = null;
@@ -76,22 +76,22 @@ public class DiaryEntry {
         this.date = date;
     }
 
-//    public Sleep getSleep() {
-//        return sleep;
-//    }
-//
-//    public void setSleep(Sleep sleep) {
-//        this.sleep = sleep;
-//    }
-//
-//    public Meditation getMeditation() {
-//        return meditation;
-//    }
-//
-//    public void setMeditation(Meditation meditation) {
-//        this.meditation = meditation;
-//    }
-//
+    public Sleep getSleep() {
+        return sleep;
+    }
+
+    public void setSleep(Sleep sleep) {
+        this.sleep = sleep;
+    }
+
+    public Meditation getMeditation() {
+        return meditation;
+    }
+
+    public void setMeditation(Meditation meditation) {
+        this.meditation = meditation;
+    }
+
 //    public ScreenTime getScreenTime() {
 //        return screenTime;
 //    }

@@ -17,11 +17,12 @@ public class Breathing {
     private int minutes;
 
     @JsonIgnoreProperties({"breathing"})
-    @OneToOne(mappedBy = "breathing")
+    @OneToOne(mappedBy = "breathing", fetch = FetchType.LAZY)
     private DiaryEntry diaryEntry;
 
-    public Breathing(int minutes) {
+    public Breathing(int minutes, DiaryEntry diaryEntry) {
         this.minutes = minutes;
+        this.diaryEntry = diaryEntry;
     }
 
     public Breathing (){}

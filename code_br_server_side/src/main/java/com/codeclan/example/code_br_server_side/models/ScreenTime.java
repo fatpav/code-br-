@@ -18,9 +18,9 @@ public class ScreenTime {
     @Column(name = "hours")
     private int hours;
 
-    @JsonIgnoreProperties({"screen_time"})
+//    @JsonIgnoreProperties({"screen_time"})
 //    @OneToOne (mappedBy = "screen_time", fetch = FetchType.LAZY)
-    private DiaryEntry diaryEntry;
+//    private DiaryEntry diaryEntry;
 
     public ScreenTime(int hours) {
         this.hours = hours;

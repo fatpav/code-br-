@@ -19,12 +19,13 @@ public class Sleep {
     private int hours;
 
     @JsonIgnoreProperties({"sleep"})
-//    @OneToOne (mappedBy = "sleep", fetch = FetchType.LAZY)
+    @OneToOne (mappedBy = "sleep", fetch = FetchType.LAZY)
     private DiaryEntry diaryEntry;
 
 
-    public Sleep(int hours) {
+    public Sleep(int hours, DiaryEntry diaryEntry) {
         this.hours = hours;
+        this.diaryEntry = diaryEntry;
     }
 
     public Sleep (){}
