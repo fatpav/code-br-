@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-
 import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
 import './App.css';
