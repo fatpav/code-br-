@@ -17,24 +17,32 @@ public class DiaryEntry {
     @Column(name="date")
     private String date;
 
+
+    @JoinColumn(name="sleep_id",referencedColumnName = "id")
+    @OneToOne (cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"diary_entries"})
-    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
     private Sleep sleep;
 
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name="meditation_id",referencedColumnName = "id")
     @JsonIgnoreProperties({"diary_entries"})
-    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
     private Meditation meditation;
 
-    @JsonIgnoreProperties({"diary_entries"})
     @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
+    @JoinColumn(name="screenTime_id",referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
     private ScreenTime screenTime;
 
-    @JsonIgnoreProperties({"diary_entries"})
+
     @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
+    @JoinColumn(name="water_id",referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
     private WaterIntake waterIntake;
 
-    @JsonIgnoreProperties({"diary_entries"})
+
     @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
+    @JoinColumn(name="breathing_id",referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
     private Breathing breathing;
 
     public DiaryEntry(Long id, String date) {
