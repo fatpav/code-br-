@@ -26,13 +26,6 @@ function App() {
           </Switch>  
         
         {/* <StartScreen></StartScreen> */}
-      {/* <Journal></Journal>  this works but doesn't go here */}
-      {/* <Breathing></Breathing> this works but doesn't go here*/}
-      {/* <Activities></Activities> this works but doesn't go here */}
-      {/* <Mood></Mood> this works but doesn't go here */}
-      {/* <Sleep></Sleep> this works but doesn't go here */}
-      {/* <Tracker></Tracker> this works but doesn't go here*/}
-      {/* <Stats></Stats> this works but doesn't go here */}
         </>
       </Router>
   );
