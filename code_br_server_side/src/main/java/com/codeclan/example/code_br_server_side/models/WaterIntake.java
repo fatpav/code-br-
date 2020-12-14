@@ -15,7 +15,7 @@ public class WaterIntake {
     @Column(name="id")
     private Long id;
 
-    
+
     @Column(name = "litres")
     private double litres;
 
