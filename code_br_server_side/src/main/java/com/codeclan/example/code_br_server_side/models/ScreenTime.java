@@ -19,7 +19,7 @@ public class ScreenTime {
     private int hours;
 
     @JsonIgnoreProperties({"screen_time"})
-    @OneToOne (mappedBy = "screen_time", fetch = FetchType.LAZY)
+//    @OneToOne (mappedBy = "screen_time", fetch = FetchType.LAZY)
     private DiaryEntry diaryEntry;
 
     public ScreenTime(int hours) {

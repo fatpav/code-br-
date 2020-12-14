@@ -17,42 +17,45 @@ public class DiaryEntry {
     @Column(name="date")
     private String date;
 
+//
+//    @JoinColumn(name="sleep_id", referencedColumnName = "id")
+//    @OneToOne (cascade = CascadeType.ALL)
+//    @JsonIgnoreProperties({"diary_entries"})
+//    private Sleep sleep;
+//
+//    @OneToOne (cascade = CascadeType.ALL)
+//    @JoinColumn(name="meditation_id", referencedColumnName = "id")
+//    @JsonIgnoreProperties({"diary_entries"})
+//    private Meditation meditation;
+//
+//    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
+//    @JoinColumn(name="screenTime_id", referencedColumnName = "id")
+//    @JsonIgnoreProperties({"diary_entries"})
+//    private ScreenTime screenTime;
+//
+//
+//    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
+//    @JoinColumn(name="water_id", referencedColumnName = "id")
+//    @JsonIgnoreProperties({"diary_entries"})
+//    private WaterIntake waterIntake;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
+    private User user;
 
-    @JoinColumn(name="sleep_id",referencedColumnName = "id")
     @OneToOne (cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"diary_entries"})
-    private Sleep sleep;
-
-    @OneToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name="meditation_id",referencedColumnName = "id")
-    @JsonIgnoreProperties({"diary_entries"})
-    private Meditation meditation;
-
-    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
-    @JoinColumn(name="screenTime_id",referencedColumnName = "id")
-    @JsonIgnoreProperties({"diary_entries"})
-    private ScreenTime screenTime;
-
-
-    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
-    @JoinColumn(name="water_id",referencedColumnName = "id")
-    @JsonIgnoreProperties({"diary_entries"})
-    private WaterIntake waterIntake;
-
-
-    @OneToOne (mappedBy = "diary_entries", fetch = FetchType.LAZY)
-    @JoinColumn(name="breathing_id",referencedColumnName = "id")
+    @JoinColumn(name="breathing_id", referencedColumnName = "id")
     @JsonIgnoreProperties({"diary_entries"})
     private Breathing breathing;
 
-    public DiaryEntry(Long id, String date) {
-        this.id = id;
+    public DiaryEntry(String date) {
         this.date = date;
-        this.sleep = null;
-        this.meditation = null;
-        this.screenTime = null;
-        this.waterIntake = null;
+//        this.sleep = null;
+//        this.meditation = null;
+//        this.screenTime = null;
+//        this.waterIntake = null;
         this.breathing = null;
+        this.user = null;
     }
 
     public DiaryEntry(){}
@@ -73,38 +76,38 @@ public class DiaryEntry {
         this.date = date;
     }
 
-    public Sleep getSleep() {
-        return sleep;
-    }
-
-    public void setSleep(Sleep sleep) {
-        this.sleep = sleep;
-    }
-
-    public Meditation getMeditation() {
-        return meditation;
-    }
-
-    public void setMeditation(Meditation meditation) {
-        this.meditation = meditation;
-    }
-
-    public ScreenTime getScreenTime() {
-        return screenTime;
-    }
-
-    public void setScreenTime(ScreenTime screenTime) {
-        this.screenTime = screenTime;
-    }
-
-    public WaterIntake getWaterIntake() {
-        return waterIntake;
-    }
-
-    public void setWaterIntake(WaterIntake waterIntake) {
-        this.waterIntake = waterIntake;
-    }
-
+//    public Sleep getSleep() {
+//        return sleep;
+//    }
+//
+//    public void setSleep(Sleep sleep) {
+//        this.sleep = sleep;
+//    }
+//
+//    public Meditation getMeditation() {
+//        return meditation;
+//    }
+//
+//    public void setMeditation(Meditation meditation) {
+//        this.meditation = meditation;
+//    }
+//
+//    public ScreenTime getScreenTime() {
+//        return screenTime;
+//    }
+//
+//    public void setScreenTime(ScreenTime screenTime) {
+//        this.screenTime = screenTime;
+//    }
+//
+//    public WaterIntake getWaterIntake() {
+//        return waterIntake;
+//    }
+//
+//    public void setWaterIntake(WaterIntake waterIntake) {
+//        this.waterIntake = waterIntake;
+//    }
+//
     public Breathing getBreathing() {
         return breathing;
     }

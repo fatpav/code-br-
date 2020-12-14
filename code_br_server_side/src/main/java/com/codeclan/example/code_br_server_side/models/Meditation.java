@@ -18,16 +18,16 @@ public class Meditation {
     @Column(name = "minutes")
     private int minutes;
 
-    @Column (name = "completed")
-    private boolean completed;
+//    @Column (name = "completed")
+//    private boolean completed;
 
-    @JsonIgnoreProperties({"meditation"})
-    @OneToOne (mappedBy = "meditation", fetch = FetchType.LAZY)
-    private DiaryEntry diaryEntry;
+//    @JsonIgnoreProperties({"meditation"})
+////    @OneToOne (mappedBy = "meditation", fetch = FetchType.LAZY)
+//    private DiaryEntry diaryEntry;
 
-    public Meditation(int minutes, boolean completed) {
+    public Meditation(int minutes) {
         this.minutes = minutes;
-        this.completed = completed;
+//        this.completed = completed;
     }
 
     public Meditation (){}
@@ -48,11 +48,11 @@ public class Meditation {
         this.minutes = minutes;
     }
 
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
+//    public boolean isCompleted() {
+//        return completed;
+//    }
+//
+//    public void setCompleted(boolean completed) {
+//        this.completed = completed;
+//    }
 }

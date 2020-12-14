@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="breathing")
-
 public class Breathing {
 
     @Id
@@ -17,16 +16,12 @@ public class Breathing {
     @Column(name = "minutes")
     private int minutes;
 
-    @Column (name = "completed")
-    private boolean completed;
-
     @JsonIgnoreProperties({"breathing"})
-    @OneToOne (mappedBy = "breathing", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "breathing")
     private DiaryEntry diaryEntry;
 
-    public Breathing(int minutes, boolean completed) {
+    public Breathing(int minutes) {
         this.minutes = minutes;
-        this.completed = completed;
     }
 
     public Breathing (){}
@@ -47,11 +42,4 @@ public class Breathing {
         this.minutes = minutes;
     }
 
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
 }

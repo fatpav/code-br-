@@ -20,7 +20,7 @@ public class WaterIntake {
     private double litres;
 
     @JsonIgnoreProperties ({"water"})
-    @OneToOne (mappedBy = "water", fetch = FetchType.LAZY)
+//    @OneToOne (mappedBy = "water", fetch = FetchType.LAZY)
     private DiaryEntry diaryEntry;
 
     public WaterIntake(double litres) {
