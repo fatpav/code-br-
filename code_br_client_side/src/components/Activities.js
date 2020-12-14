@@ -1,4 +1,5 @@
-import { Link } from "react";
+import { Link } from 'react-router-dom';
+import React from 'react';
 
 import Breathe from "./Exercises/Breathe";
 import Inspire from "./Exercises/Inspire";
@@ -10,10 +11,12 @@ const Activities = () => {
         <>
         <h2>Space for activities</h2>
         <Link to="/meditate">
-        <button>Meditate</button>
-        </Link>
+        <button>
+            Meditate
+        </button>
+       </Link>
 
-        <Link to="/breathe">
+        {/* <Link to="/breathe">
         <button>Breathe</button>
         </Link>
 
@@ -23,7 +26,7 @@ const Activities = () => {
 
         <Link to="/inspire">
         <button>Inspire</button>
-        </Link>
+        </Link> */}
         </>
     )
 }

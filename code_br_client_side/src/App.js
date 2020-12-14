@@ -11,6 +11,7 @@ import Mood from './components/Mood';
 import Sleep from './components/Sleep';
 import Tracker from './components/Tracker';
 import Stats from './components/Stats';
+import Meditate from './components/Exercises/Meditate'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/journal" component={Journal}/>
             <Route path="/activities" component={Activities}/>
             <Route path="/mystats" component={Stats}/>
+            <Route path="/meditate" component={Meditate}/>
           </Switch>  
         
         {/* <StartScreen></StartScreen> */}
