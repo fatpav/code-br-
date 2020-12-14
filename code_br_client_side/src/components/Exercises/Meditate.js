@@ -6,7 +6,13 @@ const Meditate = () => {
         <>
             <h2>Come on, we're meditating over here</h2>
 
-            <ReactPlayer url="https://soundcloud.com/user-16685247/sets/codebreak-reiki-zen"></ReactPlayer>
+            <iframe width="25%" height="20" scrolling="no" frameborder="no" allow="auto_play"
+            src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-16685247/sets/codebreak-reiki-zen" >
+            </iframe>
+
+            {/* <ReactPlayer 
+            url="https://soundcloud.com/user-16685247/sets/codebreak-reiki-zen" playing={true}>
+            </ReactPlayer> */}
             
         </>
     )
