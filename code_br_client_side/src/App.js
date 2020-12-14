@@ -5,13 +5,15 @@ import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
 import './App.css';
 import Journal from './components/Journal';
-import Breathing from './Breathing';
+import Breathe from './components/Exercises/Breathe';
 import Activities from './components/Activities';
 import Mood from './components/Mood';
 import Sleep from './components/Sleep';
 import Tracker from './components/Tracker';
 import Stats from './components/Stats';
-import Meditate from './components/Exercises/Meditate'
+import Meditate from './components/Exercises/Meditate';
+import Inspire from './components/Exercises/Inspire';
+import Yoga from './components/Exercises/Yoga';
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
             <Route path="/activities" component={Activities}/>
             <Route path="/mystats" component={Stats}/>
             <Route path="/meditate" component={Meditate}/>
+            <Route path="/yoga" component={Yoga}/>
+            <Route path="/inspire" component={Inspire}/>
+            <Route path="/breathe" component={Breathe}/>
           </Switch>  
         
         {/* <StartScreen></StartScreen> */}

@@ -16,7 +16,7 @@ const Activities = () => {
         </button>
        </Link>
 
-        {/* <Link to="/breathe">
+        <Link to="/breathe">
         <button>Breathe</button>
         </Link>
 
@@ -26,7 +26,7 @@ const Activities = () => {
 
         <Link to="/inspire">
         <button>Inspire</button>
-        </Link> */}
+        </Link>
         </>
     )
 }
