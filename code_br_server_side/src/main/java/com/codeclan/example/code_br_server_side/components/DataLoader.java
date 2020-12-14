@@ -52,6 +52,10 @@ public class DataLoader implements ApplicationRunner {
         meditationRepository.save(med1);
         entry1.setMeditation(med1);
 
+        ScreenTime screenTime1 = new ScreenTime(8, entry1);
+        screenTimeRepository.save(screenTime1);
+        entry1.setScreenTime(screenTime1);
+
         diaryEntryRepository.save(entry1);
         //        Sleep sleepTest2 = new Sleep(7);
 //        sleepRepository.save(sleepTest2);
