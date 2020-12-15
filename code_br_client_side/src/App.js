@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {React, useState, useEffect} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
@@ -16,16 +16,25 @@ import Yoga from './components/Exercises/Yoga';
 import Detail from './components/Detail'
 import WaterIntake from './components/Inputs/WaterIntake';
 import Screentime from './components/Inputs/Screentime';
-import { useEffect } from "react";
+import Loading from './components/Loading';
 
 
 function App() {
+  
+  const [onWelcome, setOnWelcome] = useState(true);
 
   useEffect(()=>{
     const loadTimer = setTimeout(() => {
-      setC
-    })
+      setOnWelcome(false)
+    }, 5000)
   })
+
+  if(onWelcome === true) {
+    return (
+      <Loading />
+    )
+  }
+
 
 
   return (

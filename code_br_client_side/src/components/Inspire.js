@@ -32,6 +32,7 @@ const Inspire = () => {
         <>
         <h2>I'm inspiring</h2>
         <p>{randomQuote}</p>
+       
         </>
     )
 };
