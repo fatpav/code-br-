@@ -11,7 +11,7 @@ import Sleep from './components/Inputs/Sleep';
 import Tracker from './components/Tracker';
 import Stats from './components/Stats';
 import Meditate from './components/Exercises/Meditate';
-import Inspire from './components/Exercises/Inspire';
+import Inspire from './components/Inspire';
 import Yoga from './components/Exercises/Yoga';
 import Detail from './components/Detail'
 import WaterIntake from './components/Inputs/WaterIntake';
