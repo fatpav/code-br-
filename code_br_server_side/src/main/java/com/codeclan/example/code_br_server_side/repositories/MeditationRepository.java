@@ -12,4 +12,5 @@ public interface MeditationRepository extends JpaRepository <Meditation, Long> {
     List<Meditation> findAll();
     List<Meditation> findById(long id);
 
+
 }
