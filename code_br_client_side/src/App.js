@@ -16,9 +16,18 @@ import Yoga from './components/Exercises/Yoga';
 import Detail from './components/Detail'
 import WaterIntake from './components/Inputs/WaterIntake';
 import Screentime from './components/Inputs/Screentime';
+import { useEffect } from "react";
 
 
 function App() {
+
+  useEffect(()=>{
+    const loadTimer = setTimeout(() => {
+      setC
+    })
+  })
+
+
   return (
       <Router>
         <>
