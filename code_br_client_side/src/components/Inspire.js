@@ -22,17 +22,22 @@ const Inspire = () => {
         "Success is not an accident, success is a choice"    
     ]
 
-    // function getRandomQuote () {
+    function getRandomQuote () {
         const randomQuote = inspoQuotes[Math.floor(Math.random()*inspoQuotes.length)]
-        // return randomQuote.value
-    // }
+        return randomQuote
+    }
+    
     // console.log(getRandomQuote());
 
     return (
         <>
         <h2>I'm inspiring</h2>
-        <p>{randomQuote}</p>
-       
+        <p>{getRandomQuote()}</p>
+            {/* <form>
+            <input onClick={getRandomQuote} type="submit"> New Quote</input>
+            </form> */}
+            
+        
         </>
     )
 };
