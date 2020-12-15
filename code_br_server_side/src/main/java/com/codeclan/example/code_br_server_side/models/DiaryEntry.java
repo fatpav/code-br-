@@ -38,15 +38,20 @@ public class DiaryEntry {
     @JsonIgnoreProperties({"diary_entries"})
     private WaterIntake waterIntake;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    @JsonIgnoreProperties({"diary_entries"})
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    @JsonIgnoreProperties({"diary_entries"})
+//    private User user;
 
     @OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name="breathing_id", referencedColumnName = "id")
     @JsonIgnoreProperties({"diary_entries"})
     private Breathing breathing;
+
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name="journal_id", referencedColumnName = "id")
+    @JsonIgnoreProperties({"diary_entries"})
+    private Journal journal;
 
     public DiaryEntry(String date) {
         this.date = date;
@@ -55,7 +60,8 @@ public class DiaryEntry {
         this.screenTime = null;
         this.waterIntake = null;
         this.breathing = null;
-        this.user = null;
+        this.journal = null;
+//        this.user = null;
     }
 
     public DiaryEntry(){}
@@ -116,5 +122,11 @@ public class DiaryEntry {
         this.breathing = breathing;
     }
 
+    public Journal getJournal() {
+        return journal;
+    }
 
+    public void setJournal(Journal journal) {
+        this.journal = journal;
+    }
 }

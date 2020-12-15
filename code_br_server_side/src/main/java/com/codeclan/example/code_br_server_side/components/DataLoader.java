@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements ApplicationRunner {
 
-    @Autowired
-    UserRepository userRepository;
+//    @Autowired
+//    UserRepository userRepository;
     @Autowired
     JournalEntryRepository journalEntryRepository;
     @Autowired
@@ -30,8 +30,8 @@ public class DataLoader implements ApplicationRunner {
     public DataLoader(){}
 
     public void run(ApplicationArguments args){
-        User user1 = new User("Json", "Jsonson", 33);
-        userRepository.save(user1);
+//        User user1 = new User("Json", "Jsonson", 33);
+//        userRepository.save(user1);
 
 
         DiaryEntry entry1 = new DiaryEntry("01/12/20");
@@ -56,6 +56,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water1 = new WaterIntake(1.5, entry1);
         waterIntakeRepository.save(water1);
         entry1.setWaterIntake(water1);
+
+        Journal journal1 = new Journal("Today was a good day", entry1);
+        journalEntryRepository.save(journal1);
+        entry1.setJournal(journal1);
 
         diaryEntryRepository.save(entry1);
 
@@ -84,6 +88,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water2);
         entry2.setWaterIntake(water2);
 
+        Journal journal2 = new Journal("Today was a bad day", entry2);
+        journalEntryRepository.save(journal2);
+        entry2.setJournal(journal2);
+
         diaryEntryRepository.save(entry2);
 
         //3
@@ -110,6 +118,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water3 = new WaterIntake(2.5, entry3);
         waterIntakeRepository.save(water3);
         entry3.setWaterIntake(water3);
+
+        Journal journal3 = new Journal("Today was a rough day", entry3);
+        journalEntryRepository.save(journal3);
+        entry3.setJournal(journal3);
 
         diaryEntryRepository.save(entry3);
 
@@ -138,6 +150,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water4);
         entry4.setWaterIntake(water4);
 
+        Journal journal4 = new Journal("Today was ace", entry4);
+        journalEntryRepository.save(journal4);
+        entry4.setJournal(journal4);
+
         diaryEntryRepository.save(entry4);
 
         //5
@@ -164,6 +180,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water5 = new WaterIntake(3.5, entry5);
         waterIntakeRepository.save(water5);
         entry5.setWaterIntake(water5);
+
+        Journal journal5 = new Journal("Today was a bad day", entry5);
+        journalEntryRepository.save(journal5);
+        entry5.setJournal(journal5);
 
         diaryEntryRepository.save(entry5);
 
@@ -192,6 +212,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water6);
         entry6.setWaterIntake(water6);
 
+        Journal journal6 = new Journal("Today was a superb day but too much screen-time", entry6);
+        journalEntryRepository.save(journal6);
+        entry6.setJournal(journal6);
+
         diaryEntryRepository.save(entry6);
 
         //7
@@ -218,6 +242,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water7 = new WaterIntake(2.0, entry7);
         waterIntakeRepository.save(water7);
         entry7.setWaterIntake(water7);
+
+        Journal journal7 = new Journal("Today was a bad day", entry7);
+        journalEntryRepository.save(journal7);
+        entry7.setJournal(journal7);
 
         diaryEntryRepository.save(entry7);
 
@@ -246,6 +274,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water8);
         entry8.setWaterIntake(water8);
 
+        Journal journal8 = new Journal("Today I didn't have much to eat", entry8);
+        journalEntryRepository.save(journal8);
+        entry8.setJournal(journal8);
+
         diaryEntryRepository.save(entry8);
 
         //9
@@ -273,6 +305,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water9);
         entry9.setWaterIntake(water9);
 
+        Journal journal9 = new Journal("Today I learned how to use React", entry9);
+        journalEntryRepository.save(journal9);
+        entry9.setJournal(journal9);
+
         diaryEntryRepository.save(entry9);
 
         //10
@@ -299,6 +335,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water10 = new WaterIntake(1.75, entry10);
         waterIntakeRepository.save(water10);
         entry10.setWaterIntake(water10);
+
+        Journal journal10 = new Journal("Today I learned how to do TDD", entry10);
+        journalEntryRepository.save(journal10);
+        entry10.setJournal(journal10);
 
         diaryEntryRepository.save(entry10);
 
@@ -328,6 +368,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water11);
         entry11.setWaterIntake(water11);
 
+        Journal journal11 = new Journal("Today was confusing but fun", entry11);
+        journalEntryRepository.save(journal11);
+        entry11.setJournal(journal11);
+
         diaryEntryRepository.save(entry11);
 
         //12
@@ -354,6 +398,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water12 = new WaterIntake(2.25, entry12);
         waterIntakeRepository.save(water12);
         entry12.setWaterIntake(water12);
+
+        Journal journal12 = new Journal("Today was a beauty", entry12);
+        journalEntryRepository.save(journal12);
+        entry12.setJournal(journal12);
 
         diaryEntryRepository.save(entry12);
 
@@ -382,6 +430,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water13);
         entry13.setWaterIntake(water13);
 
+        Journal journal13 = new Journal("Today I kicked back-end ass", entry13);
+        journalEntryRepository.save(journal13);
+        entry13.setJournal(journal13);
+
         diaryEntryRepository.save(entry13);
 
         //14
@@ -408,6 +460,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water14 = new WaterIntake(2.25, entry14);
         waterIntakeRepository.save(water14);
         entry14.setWaterIntake(water14);
+
+        Journal journal14 = new Journal("Today broke me", entry14);
+        journalEntryRepository.save(journal14);
+        entry14.setJournal(journal14);
 
         diaryEntryRepository.save(entry14);
 
@@ -436,6 +492,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water15);
         entry15.setWaterIntake(water15);
 
+        Journal journal15 = new Journal("Too much screen time", entry15);
+        journalEntryRepository.save(journal15);
+        entry15.setJournal(journal15);
+
         diaryEntryRepository.save(entry15);
 
         //16
@@ -462,6 +522,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water16 = new WaterIntake(1.75, entry16);
         waterIntakeRepository.save(water16);
         entry16.setWaterIntake(water16);
+
+        Journal journal16 = new Journal("Today was a bad day but I am happy", entry16);
+        journalEntryRepository.save(journal16);
+        entry16.setJournal(journal16);
 
         diaryEntryRepository.save(entry16);
 
@@ -490,6 +554,10 @@ public class DataLoader implements ApplicationRunner {
         waterIntakeRepository.save(water17);
         entry17.setWaterIntake(water17);
 
+        Journal journal17 = new Journal("Today was just another day", entry17);
+        journalEntryRepository.save(journal17);
+        entry17.setJournal(journal17);
+
         diaryEntryRepository.save(entry17);
 
         //18
@@ -516,6 +584,10 @@ public class DataLoader implements ApplicationRunner {
         WaterIntake water18 = new WaterIntake(1.75, entry18);
         waterIntakeRepository.save(water18);
         entry18.setWaterIntake(water18);
+
+        Journal journal18 = new Journal("Today was a great day", entry18);
+        journalEntryRepository.save(journal18);
+        entry18.setJournal(journal18);
 
         diaryEntryRepository.save(entry18);
 
