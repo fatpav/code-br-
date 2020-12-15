@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 import Breathe from "./Exercises/Breathe";
-import Inspire from "./Exercises/Inspire";
 import Meditate from "./Exercises/Meditate";
 import Yoga from "./Exercises/Yoga";
+import Inspire from "./Inspire";
 
 const Activities = () => {
     return (

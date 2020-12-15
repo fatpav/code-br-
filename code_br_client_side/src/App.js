@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {React, useState, useEffect} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
@@ -11,14 +11,32 @@ import Sleep from './components/Inputs/Sleep';
 import Tracker from './components/Tracker';
 import Stats from './components/Stats';
 import Meditate from './components/Exercises/Meditate';
-import Inspire from './components/Exercises/Inspire';
+import Inspire from './components/Inspire';
 import Yoga from './components/Exercises/Yoga';
 import Detail from './components/Detail'
 import WaterIntake from './components/Inputs/WaterIntake';
 import Screentime from './components/Inputs/Screentime';
+import Loading from './components/Loading';
 
 
 function App() {
+  
+  const [onWelcome, setOnWelcome] = useState(true);
+
+  useEffect(()=>{
+    const loadTimer = setTimeout(() => {
+      setOnWelcome(false)
+    }, 5000)
+  })
+
+  if(onWelcome === true) {
+    return (
+      <Loading />
+    )
+  }
+
+
+
   return (
       <Router>
         <>
