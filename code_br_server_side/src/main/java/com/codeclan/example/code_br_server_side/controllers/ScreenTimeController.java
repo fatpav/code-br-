@@ -38,4 +38,10 @@ public class ScreenTimeController {
         final ScreenTime updatedScreenTime = screenTimeRepository.save(screenTime);
         return ResponseEntity.ok(updatedScreenTime);
     }
+
+    @DeleteMapping(value="/screentime/{id}")
+    public ResponseEntity<Long> deleteScreenTime(@PathVariable Long id){
+        screenTimeRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
 }

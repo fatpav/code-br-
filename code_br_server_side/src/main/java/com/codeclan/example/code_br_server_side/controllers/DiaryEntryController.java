@@ -40,4 +40,10 @@ public class DiaryEntryController {
         return ResponseEntity.ok(updatedDiaryEntry);
     }
 
+    @DeleteMapping(value="/diaryentry/{id}")
+    public ResponseEntity<Long> deleteDiaryEntry(@PathVariable Long id){
+        diaryEntryRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
+
 }

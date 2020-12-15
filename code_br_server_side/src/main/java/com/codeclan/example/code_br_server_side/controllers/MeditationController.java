@@ -39,4 +39,10 @@ public class MeditationController {
         return ResponseEntity.ok(updatedMeditation);
     }
 
+    @DeleteMapping(value="/meditation/{id}")
+    public ResponseEntity<Long> deleteMeditation(@PathVariable Long id){
+        meditationRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
+
 }

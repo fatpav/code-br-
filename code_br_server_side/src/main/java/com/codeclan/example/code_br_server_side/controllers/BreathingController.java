@@ -41,4 +41,10 @@ public class BreathingController {
         final Breathing updatedBreathing = breathingRepository.save(breathing);
         return ResponseEntity.ok(updatedBreathing);
     }
+
+    @DeleteMapping(value="/breathe/{id}")
+    public ResponseEntity<Long> deleteBreathing(@PathVariable Long id){
+        breathingRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
 }

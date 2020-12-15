@@ -38,4 +38,10 @@ public class SleepController {
         final Sleep updatedSleep = sleepRepository.save(sleep);
         return ResponseEntity.ok(updatedSleep);
     }
+
+    @DeleteMapping(value="/sleep/{id}")
+    public ResponseEntity<Long> deleteSleep(@PathVariable Long id){
+        sleepRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
 }

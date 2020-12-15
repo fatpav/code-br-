@@ -38,4 +38,10 @@ public class WaterIntakeController {
         final WaterIntake updatedWaterIntake = waterIntakeRepository.save(waterIntake);
         return ResponseEntity.ok(updatedWaterIntake);
     }
+
+    @DeleteMapping(value="/waterintake/{id}")
+    public ResponseEntity<Long> deleteWaterIntake(@PathVariable Long id){
+        waterIntakeRepository.deleteById(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
 }
