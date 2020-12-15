@@ -2,6 +2,7 @@ package com.codeclan.example.code_br_server_side.controllers;
 
 
 import com.codeclan.example.code_br_server_side.models.DiaryEntry;
+import com.codeclan.example.code_br_server_side.models.WaterIntake;
 import com.codeclan.example.code_br_server_side.repositories.DiaryEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,13 @@ public class DiaryEntryController {
     public ResponseEntity<DiaryEntry> postDiaryEntry(@RequestBody DiaryEntry diaryEntry){
         DiaryEntry newDiaryEntry = diaryEntryRepository.save(diaryEntry);
         return new ResponseEntity<>(newDiaryEntry, HttpStatus.CREATED);
+    }
+
+    @PutMapping(value="/diaryentry/{id}")
+    public ResponseEntity<DiaryEntry> updateDiaryEntry(@PathVariable(value="id") Long id, @RequestBody DiaryEntry diaryEntry){
+        diaryEntry.setDate(diaryEntry.getDate());
+        final DiaryEntry updatedDiaryEntry = diaryEntryRepository.save(diaryEntry);
+        return ResponseEntity.ok(updatedDiaryEntry);
     }
 
 }
