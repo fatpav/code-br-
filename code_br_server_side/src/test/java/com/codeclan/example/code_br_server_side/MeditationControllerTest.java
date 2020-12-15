@@ -52,5 +52,5 @@ public class MeditationControllerTest {
         meditationRepository.save(med19);
     }
 
-    
+
 }
