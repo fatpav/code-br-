@@ -1,5 +1,6 @@
 package com.codeclan.example.code_br_server_side.controllers;
 
+import com.codeclan.example.code_br_server_side.models.Sleep;
 import com.codeclan.example.code_br_server_side.models.WaterIntake;
 import com.codeclan.example.code_br_server_side.repositories.WaterIntakeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,12 @@ public class WaterIntakeController {
     public ResponseEntity<WaterIntake> postWaterIntake(@RequestBody WaterIntake waterIntake){
         WaterIntake newWaterIntake = waterIntakeRepository.save(waterIntake);
         return new ResponseEntity<>(newWaterIntake, HttpStatus.CREATED);
+    }
+
+    @PutMapping(value="/waterintake/{id}")
+    public ResponseEntity<WaterIntake> updateWaterIntake(@PathVariable(value="id") Long id, @RequestBody WaterIntake waterIntake){
+        waterIntake.setLitres(waterIntake.getLitres());
+        final WaterIntake updatedWaterIntake = waterIntakeRepository.save(waterIntake);
+        return ResponseEntity.ok(updatedWaterIntake);
     }
 }

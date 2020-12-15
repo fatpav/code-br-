@@ -1,5 +1,6 @@
 package com.codeclan.example.code_br_server_side.controllers;
 
+import com.codeclan.example.code_br_server_side.models.Meditation;
 import com.codeclan.example.code_br_server_side.models.ScreenTime;
 import com.codeclan.example.code_br_server_side.repositories.ScreenTimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,12 @@ public class ScreenTimeController {
     public ResponseEntity<ScreenTime> postScreenTime(@RequestBody ScreenTime screenTime){
         ScreenTime newScreenTime = screenTimeRepository.save(screenTime);
         return new ResponseEntity<>(newScreenTime, HttpStatus.CREATED);
+    }
+
+    @PutMapping(value="/screentime/{id}")
+    public ResponseEntity<ScreenTime> updatedScreenTime(@PathVariable(value="id") Long id, @RequestBody ScreenTime screenTime){
+        screenTime.setHours(screenTime.getHours());
+        final ScreenTime updatedScreenTime = screenTimeRepository.save(screenTime);
+        return ResponseEntity.ok(updatedScreenTime);
     }
 }

@@ -3,7 +3,6 @@ package com.codeclan.example.code_br_server_side.controllers;
 
 import com.codeclan.example.code_br_server_side.models.Meditation;
 import com.codeclan.example.code_br_server_side.repositories.MeditationRepository;
-import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +30,13 @@ public class MeditationController {
     public ResponseEntity<Meditation> postMeditation(@RequestBody Meditation meditation){
         Meditation newMeditation = meditationRepository.save(meditation);
         return new ResponseEntity<>(newMeditation, HttpStatus.CREATED);
+    }
+
+    @PutMapping(value="/meditate/{id}")
+    public ResponseEntity<Meditation> updateMeditation(@PathVariable(value="id") Long id, @RequestBody Meditation meditation){
+        meditation.setMinutes(meditation.getMinutes());
+        final Meditation updatedMeditation = meditationRepository.save(meditation);
+        return ResponseEntity.ok(updatedMeditation);
     }
 
 }

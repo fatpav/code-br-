@@ -2,6 +2,7 @@ package com.codeclan.example.code_br_server_side.controllers;
 
 
 import com.codeclan.example.code_br_server_side.models.Breathing;
+import com.codeclan.example.code_br_server_side.models.Meditation;
 import com.codeclan.example.code_br_server_side.repositories.BreathingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,5 +33,12 @@ public class BreathingController {
         Breathing newBreathing  = breathingRepository.save(breathing);
         return new ResponseEntity<>(newBreathing, HttpStatus.CREATED);
 
+    }
+
+    @PutMapping(value="/breathe/{id}")
+    public ResponseEntity<Breathing> updateBreathing(@PathVariable(value="id") Long id, @RequestBody Breathing breathing){
+        breathing.setMinutes(breathing.getMinutes());
+        final Breathing updatedBreathing = breathingRepository.save(breathing);
+        return ResponseEntity.ok(updatedBreathing);
     }
 }
