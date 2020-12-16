@@ -1,6 +1,6 @@
 const Sleep = () => {
     return (
-        <h2>Sleepy times go here.</h2>
+        <h2>Sleep</h2>
     )
 };
 

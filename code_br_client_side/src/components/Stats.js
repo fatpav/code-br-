@@ -4,33 +4,39 @@ import { Link } from 'react-router-dom';
 const Stats = () => {
     return (
         <>
-            <h2>Stats</h2>
+            <h2>My Stats</h2>
+            <div class="navbar">
 
-            <Link to= "/sleep">
-                <button>Sleep</button>
-            </Link>
+                <Link to="/sleep">
+                    <button class="navbuttons" > Sleep</button>
+                </Link>
 
-            <Link to= "/mood">
-                <button>Mood</button>
-            </Link>
+                {/* <Link to="/mood">
+                <button class="navbuttons" >Mood</button>
+            </Link> */}
 
-            <Link to="/waterintake">
-                <button>Water Intake</button>
-            </Link>
+                <Link to="/waterintake">
+                    <button class="navbuttons" >Water Intake</button>
+                </Link>
 
-            <Link to= "/screentime">
-                <button>Screentime</button>
-            </Link>
-
-
-            <Link to= "/detail">
-                <button>Detail</button>
-            </Link>
+                <Link to="/screentime">
+                    <button class="navbuttons" >Screentime</button>
+                </Link>
 
 
-            <Link to= "/tracker">
-                <button>Tracker</button>
-            </Link>
+                <Link to="/detail">
+                    <button class="navbuttons" >Daily Stats</button>
+                </Link>
+
+
+                <Link to="/tracker">
+                    <button class="navbuttons" >Tracker</button>
+                </Link>
+            </div>
+
+
+
+
         </>
     )
 }
