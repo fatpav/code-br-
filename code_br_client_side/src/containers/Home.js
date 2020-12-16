@@ -34,6 +34,12 @@ const Home = () => {
         // console.log(diaryEntries);
 };
 
+const handleUpdate = (property, value) => {
+  const newDiaryEntry = [...diaryEntry]
+  newDiaryEntry[newDiaryEntry.length -1][property]=value
+  setDiaryEntry(newDiaryEntry)
+  console.log("updated")
+}
 
 
 useEffect(()=>{
@@ -53,7 +59,7 @@ useEffect(()=>{
         <>
         <NavBar />
           <Switch>
-            <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry}/>}/>
+            <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
             <Route path="/new" component={DiaryForm}/>
             <Route path="/journal" component={Journal}/>
             <Route path="/activities" component={Activities}/>

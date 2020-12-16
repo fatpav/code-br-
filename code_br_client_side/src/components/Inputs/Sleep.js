@@ -1,9 +1,9 @@
-// import classes from '*.module.css';
+
 import {useState} from 'react';
 import {Slider, Typography} from '@material-ui/core';
 import axios from 'axios';
 
-const Sleep = ({diary}) => {
+const Sleep = ({diary, handleUpdate}) => {
 
     const [sleep, setSleep] = useState(0)
    
@@ -24,10 +24,16 @@ const Sleep = ({diary}) => {
           data
         })
         .then(
-            axios.put(`http://localhost:8080/diaryentry/${diary}`),
-                data
-              )
-          .catch(err => {
+            res => {
+                handleUpdate("sleep", res.data)           
+                // axios({
+                //     method: "put",
+                //     url: `http://localhost:8080/diaryentry/${diary}`, 
+                //     diary
+                // })
+            }
+        )
+        .catch(err => {
             console.log(err);
           });
         };

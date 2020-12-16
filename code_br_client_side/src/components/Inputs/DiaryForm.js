@@ -1,7 +1,7 @@
 import ScreenTime from './Screentime';
 import Sleep from './Sleep';
 
-const DiaryForm = (diary) => {
+const DiaryForm = ({diary, handleUpdate}) => {
 
 
     
@@ -9,7 +9,7 @@ const DiaryForm = (diary) => {
         <>
         <h1>Diary entry here</h1>
         {/* <ScreenTime /> */}
-        <Sleep diary={diary}/>
+        <Sleep diary={diary} handleUpdate={(property, value)=>handleUpdate(property, value)}/>
         </>
         )
 }

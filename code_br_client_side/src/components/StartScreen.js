@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 
-const StartScreen = ({diaryEntry}) =>{
+const StartScreen = ({diaryEntry, handleUpdate}) =>{
 
 
     const [diaryCreated, setDiaryCreated] = useState(false)
@@ -25,7 +25,7 @@ const StartScreen = ({diaryEntry}) =>{
     // },[])
 
     if (diaryCreated || diaryEntry[diaryEntry.length -1].date == today){
-        return <DiaryForm  diary={diaryEntry[diaryEntry.length -1]}/>
+        return <DiaryForm  diary={diaryEntry[diaryEntry.length -1]} handleUpdate={handleUpdate}/>
     }
 
 
