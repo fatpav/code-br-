@@ -1,44 +1,29 @@
 import {Link} from 'react-router-dom'
 import Loading from './Loading';
-
-const StartScreen = () =>{
-
+import DiaryForm from '../components/Inputs/DiaryForm';
 
 
+const StartScreen = ({diaryEntry}) =>{
+
+    const dateObj = new Date();
+    const month = dateObj.getMonth()+1;
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const year = dateObj.getFullYear().toString().slice(-2);
+    const today = `${day}/${month}/${year}`
     
+    let componentToRender 
+
+    if (diaryEntry.length && diaryEntry[diaryEntry.length -1].date !== today){
+        componentToRender = <DiaryForm />
+    } else {
+        componentToRender = <h1>Home Page</h1>
+    }
+
+
 
     return (
         <>
-                <h1>Start Screen</h1>
-                
-            <Link to= "/sleep">
-                <button>Sleep</button>
-            </Link>
-
-            <Link to= "/mood">
-               <button>Mood</button>
-            </Link>
-
-            <Link to="/waterintake">
-                <button>Water Intake</button>
-            </Link>
-
-            <Link to= "/screentime">
-                <button>Screentime</button>
-            </Link>
-
-
-             <Link to= "/detail">
-                 <button>Detail</button>
-            </Link>
-
-            <Link to= "/tracker">
-                <button>Tracker</button>
-            </Link>
-            
-
-
-        
+        {componentToRender}
         </>
     )
 }

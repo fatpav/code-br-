@@ -16,6 +16,7 @@ import Detail from '../components/Detail'
 import WaterIntake from '../components/Inputs/WaterIntake';
 import Screentime from '../components/Inputs/Screentime';
 import Loading from '../components/Loading';
+import DiaryForm from "../components/Inputs/DiaryForm";
 
 
 const Home = () => {
@@ -48,8 +49,8 @@ useEffect(()=>{
         <>
         <NavBar />
           <Switch>
-            <Route exact path="/" component={StartScreen} />
-            {/* <RefreshRoute exact path="/" component={StartScreen} /> */}
+            <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry}/>}/>
+            <Route path="/new" component={DiaryForm}/>
             <Route path="/journal" component={Journal}/>
             <Route path="/activities" component={Activities}/>
             {/* <Route path="/mystats" component={Stats}/> */}
