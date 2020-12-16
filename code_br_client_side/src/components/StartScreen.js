@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import {useState} from 'react';
 import Loading from './Loading';
-import {StarOutline, ThumbUpOutline} from 'heroicons-react';
+import {ThumbUpOutline} from 'heroicons-react';
 
 const StartScreen = () =>{
 
