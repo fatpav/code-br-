@@ -161,7 +161,7 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
     position: absolute;
     mix-blend-mode: screen;
     transform: translate(0, 0);
-    animation: center 6s infinite;
+    animation: center 7s infinite;
   }
   
   .circle:nth-child(odd) {
