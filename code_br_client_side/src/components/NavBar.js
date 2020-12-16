@@ -18,7 +18,7 @@ const NavBar = () => {
             </li>
 
             <li>
-                <Link to="/mystats">My Stats</Link>
+                <Link to="/detail">My Stats</Link>
             </li>
         </ul>
         
