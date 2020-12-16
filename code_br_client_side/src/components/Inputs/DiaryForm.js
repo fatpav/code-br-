@@ -1,6 +1,7 @@
 import ScreenTime from './Screentime';
 import Sleep from './Sleep';
 import WaterIntake from './WaterIntake';
+import Breathing from './Breathing';
 
 
 const DiaryForm = ({diary, handleUpdate}) => {
@@ -13,6 +14,7 @@ const DiaryForm = ({diary, handleUpdate}) => {
         <Sleep diary={diary} handleUpdate={(property, value)=>handleUpdate(property, value)}/>
         <ScreenTime diary={diary} handleUpdate={(property, value)=>handleUpdate(property, value)}/>
         <WaterIntake diary={diary} handleUpdate={(property, value)=>handleUpdate(property, value)}/>
+        <Breathing diary={diary} handleUpdate={(property, value)=>handleUpdate(property, value)}/>
         </>
         )
 }

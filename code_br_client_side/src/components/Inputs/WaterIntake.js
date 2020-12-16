@@ -63,7 +63,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
                 />
             <form 
                 onSubmit={submitForm} >
-            <button type="submit">Submit Sleep</button>
+            <button type="submit">Add Entry</button>
             </form>  
       </div>
         
