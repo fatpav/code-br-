@@ -1,22 +1,17 @@
-import {Link} from 'react-router-dom'
-import Loading from './Loading';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const StartScreen = () =>{
-
-
-
-    
-
+const Stats = () => {
     return (
         <>
-                <h1>Start Screen</h1>
-                
+            <h2>Stats</h2>
+
             <Link to= "/sleep">
                 <button>Sleep</button>
             </Link>
 
             <Link to= "/mood">
-               <button>Mood</button>
+                <button>Mood</button>
             </Link>
 
             <Link to="/waterintake">
@@ -28,19 +23,16 @@ const StartScreen = () =>{
             </Link>
 
 
-             <Link to= "/detail">
-                 <button>Detail</button>
+            <Link to= "/detail">
+                <button>Detail</button>
             </Link>
+
 
             <Link to= "/tracker">
                 <button>Tracker</button>
             </Link>
-            
-
-
-        
         </>
     )
 }
 
-export default StartScreen;
+export default Stats;
