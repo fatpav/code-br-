@@ -2,9 +2,13 @@ import {Link} from 'react-router-dom'
 import Loading from './Loading';
 import DiaryForm from '../components/Inputs/DiaryForm';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 
 const StartScreen = ({diaryEntry}) =>{
+
+
+    const [diaryCreated, setDiaryCreated] = useState(false)
 
     const dateObj = new Date();
     const month = dateObj.getMonth()+1;
@@ -14,17 +18,15 @@ const StartScreen = ({diaryEntry}) =>{
     
     let componentToRender 
 
-    // if (diaryEntry.length && diaryEntry[diaryEntry.length -1].date !== today){
-        
-    //     componentToRender = <DiaryForm />
-    // } else {
-    //     componentToRender = <h1>Home Page</h1>
-    // }
 
-  
+    // useEffect(()=>{
 
 
+    // },[])
 
+    if (diaryCreated || diaryEntry[diaryEntry.length -1].date == today){
+        return <DiaryForm  diary={diaryEntry[diaryEntry.length -1]}/>
+    }
 
 
     const submitForm = (event) => {
@@ -38,7 +40,7 @@ const StartScreen = ({diaryEntry}) =>{
           data
         })
           .then(res => {
-            console.log("Yeet") 
+            setDiaryCreated(true)
           })
           .catch(err => {
             console.log(err);

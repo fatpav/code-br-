@@ -2807,3 +2807,6 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+2020-12-16 15:03:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE *[*] FROM DIARY_ENTRIES WHERE ID=16"; expected "identifier"; SQL statement:
+DELETE * FROM DIARY_ENTRIES WHERE id=16 [42001-200]

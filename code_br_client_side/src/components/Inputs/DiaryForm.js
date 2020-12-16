@@ -1,13 +1,15 @@
 import ScreenTime from './Screentime';
+import Sleep from './Sleep';
 
-const DiaryForm = () => {
+const DiaryForm = (diary) => {
 
 
     
     return (
         <>
         <h1>Diary entry here</h1>
-        <ScreenTime />
+        {/* <ScreenTime /> */}
+        <Sleep diary={diary}/>
         </>
         )
 }
