@@ -1,5 +1,5 @@
-import {React, useState, useEffect} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { React, useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import StartScreen from './components/StartScreen'
 import './App.css';
@@ -20,16 +20,16 @@ import Loading from './components/Loading';
 
 
 function App() {
-  
+
   const [onWelcome, setOnWelcome] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     const loadTimer = setTimeout(() => {
       setOnWelcome(false)
-    }, 5000)
+    }, 1000)
   })
 
-  if(onWelcome === true) {
+  if (onWelcome === true) {
     return (
       <Loading />
     )
@@ -38,27 +38,28 @@ function App() {
 
 
   return (
-      <Router>
-        <>
+    <Router>
+      <>
+        <h1 class="heading">code&lt;br&gt;</h1>
+        <Switch>
+          <Route exact path="/" component={StartScreen} />
+          <Route path="/journal" component={Journal} />
+          <Route path="/activities" component={Activities} />
+          <Route path="/mystats" component={Stats} />
+          <Route path="/meditate" component={Meditate} />
+          <Route path="/yoga" component={Yoga} />
+          <Route path="/inspire" component={Inspire} />
+          <Route path="/breathe" component={Breathe} />
+          <Route path="/mood" component={Mood} />
+          <Route path="/sleep" component={Sleep} />
+          <Route path="/detail" component={Detail} />
+          <Route path="/tracker" component={Tracker} />
+          <Route path="/waterintake" component={WaterIntake} />
+          <Route path="/screentime" component={Screentime} />
+        </Switch>
         <NavBar />
-          <Switch>
-            <Route exact path="/" component={StartScreen} />
-            <Route path="/journal" component={Journal}/>
-            <Route path="/activities" component={Activities}/>
-            <Route path="/mystats" component={Stats}/>
-            <Route path="/meditate" component={Meditate}/>
-            <Route path="/yoga" component={Yoga}/>
-            <Route path="/inspire" component={Inspire}/>
-            <Route path="/breathe" component={Breathe}/>
-            <Route path="/mood" component={Mood}/>
-            <Route path="/sleep" component={Sleep}/>
-            <Route path="/detail" component={Detail}/>
-            <Route path="/tracker" component={Tracker}/>
-            <Route path="/waterintake" component={WaterIntake}/>
-            <Route path="/screentime" component={Screentime}/>
-          </Switch>  
-        </>
-      </Router>
+      </>
+    </Router>
   );
 }
 
