@@ -9,24 +9,24 @@ import Inspire from "./Inspire";
 const Activities = () => {
     return (
         <>
-        <h2>Space for activities</h2>
-        <Link to="/meditate">
-        <button>
-            Meditate
+            <h2>Activities</h2>
+            <Link to="/meditate">
+                <button class="navbuttons" >
+                    Meditate
         </button>
-       </Link>
+            </Link>
 
-        <Link to="/breathe">
-        <button>Breathe</button>
-        </Link>
+            <Link to="/breathe">
+                <button class="navbuttons" >Breathe</button>
+            </Link>
 
-        <Link to="/yoga">
-        <button>Yoga</button>
-        </Link>
+            <Link to="/yoga">
+                <button class="navbuttons" >Yoga</button>
+            </Link>
 
-        <Link to="/inspire">
-        <button>Inspire</button>
-        </Link>
+            <Link to="/inspire">
+                <button class="navbuttons" >Inspire</button>
+            </Link>
         </>
     )
 }

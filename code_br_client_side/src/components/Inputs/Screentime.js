@@ -27,10 +27,7 @@ const Screentime = () => {
                 <button type="submit">Submit</button>
         </form>
     </div>
-    
-    
-
     )
-}
+};
 
 export default Screentime;
