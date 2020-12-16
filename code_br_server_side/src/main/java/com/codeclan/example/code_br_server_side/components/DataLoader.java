@@ -500,96 +500,96 @@ public class DataLoader implements ApplicationRunner {
 
         //16
 
-        DiaryEntry entry16 = new DiaryEntry("16/12/20");
-        diaryEntryRepository.save(entry16);
-
-        Breathing breathe16 = new Breathing(8, entry16);
-        breathingRepository.save(breathe16);
-        entry16.setBreathing(breathe16);
-
-        Sleep sleepTest16 = new Sleep(5, entry16);
-        sleepRepository.save(sleepTest16);
-        entry16.setSleep(sleepTest16);
-
-        Meditation med16 = new Meditation(0, entry16);
-        meditationRepository.save(med16);
-        entry16.setMeditation(med16);
-
-        ScreenTime screenTime16 = new ScreenTime(10, entry16);
-        screenTimeRepository.save(screenTime16);
-        entry16.setScreenTime(screenTime16);
-
-        WaterIntake water16 = new WaterIntake(1.75, entry16);
-        waterIntakeRepository.save(water16);
-        entry16.setWaterIntake(water16);
-
-        Journal journal16 = new Journal("Today was a bad day but I am happy", entry16);
-        journalEntryRepository.save(journal16);
-        entry16.setJournal(journal16);
-
-        diaryEntryRepository.save(entry16);
+//        DiaryEntry entry16 = new DiaryEntry("16/12/20");
+//        diaryEntryRepository.save(entry16);
+//
+//        Breathing breathe16 = new Breathing(8, entry16);
+//        breathingRepository.save(breathe16);
+//        entry16.setBreathing(breathe16);
+//
+//        Sleep sleepTest16 = new Sleep(5, entry16);
+//        sleepRepository.save(sleepTest16);
+//        entry16.setSleep(sleepTest16);
+//
+//        Meditation med16 = new Meditation(0, entry16);
+//        meditationRepository.save(med16);
+//        entry16.setMeditation(med16);
+//
+//        ScreenTime screenTime16 = new ScreenTime(10, entry16);
+//        screenTimeRepository.save(screenTime16);
+//        entry16.setScreenTime(screenTime16);
+//
+//        WaterIntake water16 = new WaterIntake(1.75, entry16);
+//        waterIntakeRepository.save(water16);
+//        entry16.setWaterIntake(water16);
+//
+//        Journal journal16 = new Journal("Today was a bad day but I am happy", entry16);
+//        journalEntryRepository.save(journal16);
+//        entry16.setJournal(journal16);
+//
+//        diaryEntryRepository.save(entry16);
 
         //17
 
-        DiaryEntry entry17 = new DiaryEntry("17/12/20");
-        diaryEntryRepository.save(entry17);
-
-        Breathing breathe17 = new Breathing(16, entry17);
-        breathingRepository.save(breathe17);
-        entry17.setBreathing(breathe17);
-
-        Sleep sleepTest17 = new Sleep(4, entry17);
-        sleepRepository.save(sleepTest17);
-        entry17.setSleep(sleepTest17);
-
-        Meditation med17 = new Meditation(10, entry17);
-        meditationRepository.save(med17);
-        entry17.setMeditation(med17);
-
-        ScreenTime screenTime17 = new ScreenTime(11, entry17);
-        screenTimeRepository.save(screenTime17);
-        entry17.setScreenTime(screenTime17);
-
-        WaterIntake water17 = new WaterIntake(0.75, entry17);
-        waterIntakeRepository.save(water17);
-        entry17.setWaterIntake(water17);
-
-        Journal journal17 = new Journal("Today was just another day", entry17);
-        journalEntryRepository.save(journal17);
-        entry17.setJournal(journal17);
-
-        diaryEntryRepository.save(entry17);
+//        DiaryEntry entry17 = new DiaryEntry("17/12/20");
+//        diaryEntryRepository.save(entry17);
+//
+//        Breathing breathe17 = new Breathing(16, entry17);
+//        breathingRepository.save(breathe17);
+//        entry17.setBreathing(breathe17);
+//
+//        Sleep sleepTest17 = new Sleep(4, entry17);
+//        sleepRepository.save(sleepTest17);
+//        entry17.setSleep(sleepTest17);
+//
+//        Meditation med17 = new Meditation(10, entry17);
+//        meditationRepository.save(med17);
+//        entry17.setMeditation(med17);
+//
+//        ScreenTime screenTime17 = new ScreenTime(11, entry17);
+//        screenTimeRepository.save(screenTime17);
+//        entry17.setScreenTime(screenTime17);
+//
+//        WaterIntake water17 = new WaterIntake(0.75, entry17);
+//        waterIntakeRepository.save(water17);
+//        entry17.setWaterIntake(water17);
+//
+//        Journal journal17 = new Journal("Today was just another day", entry17);
+//        journalEntryRepository.save(journal17);
+//        entry17.setJournal(journal17);
+//
+//        diaryEntryRepository.save(entry17);
 
         //18
 
-        DiaryEntry entry18 = new DiaryEntry("18/12/20");
-        diaryEntryRepository.save(entry18);
-
-        Breathing breathe18 = new Breathing(6, entry18);
-        breathingRepository.save(breathe18);
-        entry18.setBreathing(breathe18);
-
-        Sleep sleepTest18 = new Sleep(6, entry18);
-        sleepRepository.save(sleepTest18);
-        entry18.setSleep(sleepTest18);
-
-        Meditation med18 = new Meditation(20, entry18);
-        meditationRepository.save(med18);
-        entry18.setMeditation(med18);
-
-        ScreenTime screenTime18 = new ScreenTime(8, entry18);
-        screenTimeRepository.save(screenTime18);
-        entry18.setScreenTime(screenTime18);
-
-        WaterIntake water18 = new WaterIntake(1.75, entry18);
-        waterIntakeRepository.save(water18);
-        entry18.setWaterIntake(water18);
-
-        Journal journal18 = new Journal("Today was a great day", entry18);
-        journalEntryRepository.save(journal18);
-        entry18.setJournal(journal18);
-
-        diaryEntryRepository.save(entry18);
+//        DiaryEntry entry18 = new DiaryEntry("18/12/20");
+//        diaryEntryRepository.save(entry18);
+//
+//        Breathing breathe18 = new Breathing(6, entry18);
+//        breathingRepository.save(breathe18);
+//        entry18.setBreathing(breathe18);
+//
+//        Sleep sleepTest18 = new Sleep(6, entry18);
+//        sleepRepository.save(sleepTest18);
+//        entry18.setSleep(sleepTest18);
+//
+//        Meditation med18 = new Meditation(20, entry18);
+//        meditationRepository.save(med18);
+//        entry18.setMeditation(med18);
+//
+//        ScreenTime screenTime18 = new ScreenTime(8, entry18);
+//        screenTimeRepository.save(screenTime18);
+//        entry18.setScreenTime(screenTime18);
+//
+//        WaterIntake water18 = new WaterIntake(1.75, entry18);
+//        waterIntakeRepository.save(water18);
+//        entry18.setWaterIntake(water18);
+//
+//        Journal journal18 = new Journal("Today was a great day", entry18);
+//        journalEntryRepository.save(journal18);
+//        entry18.setJournal(journal18);
+//
+//        diaryEntryRepository.save(entry18);
 
 
 

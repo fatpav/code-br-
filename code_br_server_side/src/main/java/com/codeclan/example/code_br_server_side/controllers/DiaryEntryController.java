@@ -33,6 +33,7 @@ public class DiaryEntryController {
         return new ResponseEntity<>(newDiaryEntry, HttpStatus.CREATED);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping(value="/diaryentry/{id}")
     public ResponseEntity<DiaryEntry> updateDiaryEntry(@PathVariable(value="id") Long id, @RequestBody DiaryEntry diaryEntry){
         diaryEntry.setDate(diaryEntry.getDate());

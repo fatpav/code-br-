@@ -16,6 +16,7 @@ import Detail from '../components/Detail'
 import WaterIntake from '../components/Inputs/WaterIntake';
 import Screentime from '../components/Inputs/Screentime';
 import Loading from '../components/Loading';
+import DiaryForm from "../components/Inputs/DiaryForm";
 
 
 const Home = () => {
@@ -33,15 +34,25 @@ const Home = () => {
     // console.log(diaryEntries);
   };
 
+const handleUpdate = (property, value) => {
+  const newDiaryEntry = [...diaryEntry]
+  newDiaryEntry[newDiaryEntry.length -1][property]=value
+  setDiaryEntry(newDiaryEntry)
+  console.log("updated")
+}
 
 
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setOnWelcome(false)
-    }, 5000)
+    }, 1000)
     getData();
   }, [selectedDiaryEntry])
 
+
+  if(onWelcome){
+    return <Loading />
+  };
 
   return (
     <Router>
@@ -49,58 +60,27 @@ const Home = () => {
         <h1 class="heading">code&lt;br&gt;</h1>
 
         <Switch>
-          <Route exact path="/" component={StartScreen} />
-          {/* <RefreshRoute exact path="/" component={StartScreen} /> */}
-          <Route path="/journal" component={Journal} />
-          <Route path="/activities" component={Activities} />
-          {/* <Route path="/mystats" component={Stats}/> */}
-          <Route path="/meditate" component={Meditate} />
-          <Route path="/yoga" component={Yoga} />
-          <Route path="/inspire" component={Inspire} />
-          <Route path="/breathe" component={Breathe} />
-          <Route path="/mood" component={Mood} />
-          <Route path="/sleep" component={Sleep} />
-          <Route path="/detail" render={(props) => <Detail {...props} diaryEntry={diaryEntry} />} />
-          <Route path="/tracker" component={Tracker} />
-          <Route path="/waterintake" component={WaterIntake} />
-          <Route path="/screentime" component={Screentime} />
-        </Switch>
-        <NavBar />
-      </>
-    </Router>
+         
+            <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
+            <Route path="/new" component={DiaryForm}/>
+            <Route path="/journal" component={Journal}/>
+            <Route path="/activities" component={Activities}/>
+            {/* <Route path="/mystats" component={Stats}/> */}
+            <Route path="/meditate" component={Meditate}/>
+            <Route path="/yoga" component={Yoga}/>
+            <Route path="/inspire" component={Inspire}/>
+            <Route path="/breathe" component={Breathe}/>
+            <Route path="/mood" component={Mood}/>
+            <Route path="/sleep" component={Sleep}/>
+            <Route path="/detail"  render={(props)=> <Detail {...props} diaryEntry={diaryEntry}/>}/>
+            <Route path="/tracker" component={Tracker}/>
+            <Route path="/waterintake" component={WaterIntake}/>
+            <Route path="/screentime" component={Screentime}/>
+            <NavBar />
+          </Switch>  
+        </>
+      </Router>
   );
-
-  //     return (
-  //         <>
-  //             <h2>Home</h2>
-
-  //             <Link to= "/sleep">
-  //                 <button>Sleep</button>
-  //             </Link>
-
-  //             <Link to= "/mood">
-  //                 <button>Mood</button>
-  //             </Link>
-
-  //             <Link to="/waterintake">
-  //                 <button>Water Intake</button>
-  //             </Link>
-
-  //             <Link to= "/screentime">
-  //                 <button>Screentime</button>
-  //             </Link>
-
-
-  //             <Link to= "/detail">
-  //                 <button>Detail</button>
-  //             </Link>
-
-
-  //             <Link to= "/tracker">
-  //                 <button>Tracker</button>
-  //             </Link>
-  //         </>
-  //     )
 }
 
 export default Home;
