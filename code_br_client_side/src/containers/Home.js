@@ -61,23 +61,24 @@ const handleUpdate = (property, value) => {
 
         <Switch>
          
-            <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
-            <Route path="/new" component={DiaryForm}/>
-            <Route path="/journal" component={Journal}/>
-            <Route path="/activities" component={Activities}/>
-            {/* <Route path="/mystats" component={Stats}/> */}
-            <Route path="/meditate" component={Meditate}/>
-            <Route path="/yoga" component={Yoga}/>
-            <Route path="/inspire" component={Inspire}/>
-            <Route path="/breathe" component={Breathe}/>
-            <Route path="/mood" component={Mood}/>
-            <Route path="/sleep" component={Sleep}/>
-            <Route path="/detail"  render={(props)=> <Detail {...props} diaryEntry={diaryEntry}/>}/>
-            <Route path="/tracker" component={Tracker}/>
-            <Route path="/waterintake" component={WaterIntake}/>
-            <Route path="/screentime" component={Screentime}/>
-            <NavBar />
-          </Switch>  
+              <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
+              <Route path="/new" component={DiaryForm}/>
+              <Route path="/journal" component={Journal}/>
+              <Route path="/activities" component={Activities}/>
+              {/* <Route path="/mystats" component={Stats}/> */}
+              <Route path="/meditate" component={Meditate}/>
+              <Route path="/yoga" component={Yoga}/>
+              <Route path="/inspire" component={Inspire}/>
+              <Route path="/breathe" component={Breathe}/>
+              <Route path="/mood" component={Mood}/>
+              <Route path="/sleep" component={Sleep}/>
+              <Route path="/detail"  render={(props)=> <Detail {...props} diaryEntry={diaryEntry}/>}/>
+              <Route path="/tracker" component={Tracker}/>
+              <Route path="/waterintake" component={WaterIntake}/>
+              <Route path="/screentime" component={Screentime}/>
+              
+            </Switch>  
+          <NavBar />
         </>
       </Router>
   );
