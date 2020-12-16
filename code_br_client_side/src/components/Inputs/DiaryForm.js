@@ -1,11 +1,15 @@
-
+import ScreenTime from './Screentime';
 
 const DiaryForm = () => {
 
-    return (
 
+    
+    return (
+        <>
         <h1>Diary entry here</h1>
+        <ScreenTime />
+        </>
         )
 }
 
-export default DiaryForm
+export default DiaryForm;
