@@ -25,17 +25,24 @@ const Sleep = ({diary, handleUpdate}) => {
         })
         .then(
             res => {
-                handleUpdate("sleep", res.data)           
-                // axios({
-                //     method: "put",
-                //     url: `http://localhost:8080/diaryentry/${diary}`, 
-                //     diary
-                // })
+                handleUpdate("sleep", res.data)   
+                // console.log(diary)        
+                axios.put(`http://localhost:8080/diaryentry/${diary.id}`, diary,
+                {
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                      },
+                    })
+            .then(
+                res => console.log("PLEASE!")
+            )
             }
         )
-        .catch(err => {
-            console.log(err);
-          });
+            .catch(err => {
+                console.log(err);
+            });
         };
 
             
