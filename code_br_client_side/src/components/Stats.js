@@ -33,10 +33,7 @@ const Stats = () => {
                     <button class="navbuttons" >Tracker</button>
                 </Link>
             </div>
-
-
-
-
+            
         </>
     )
 }

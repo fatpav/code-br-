@@ -19,11 +19,6 @@ const StartScreen = ({diaryEntry, handleUpdate}) =>{
     let componentToRender 
 
 
-    // useEffect(()=>{
-
-
-    // },[])
-
     if (diaryCreated || diaryEntry[diaryEntry.length -1].date == today){
         return <DiaryForm  diary={diaryEntry[diaryEntry.length -1]} handleUpdate={handleUpdate}/>
     }
