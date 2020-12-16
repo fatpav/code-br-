@@ -39,10 +39,14 @@ const Home = () => {
 useEffect(()=>{
     const loadTimer = setTimeout(() => {
       setOnWelcome(false)
-    }, 5000)
+    }, 1000)
     getData();
   }, [selectedDiaryEntry])
 
+
+  if(onWelcome){
+    return <Loading />
+  };
 
   return (
       <Router>
