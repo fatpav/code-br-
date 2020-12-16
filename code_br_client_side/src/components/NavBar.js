@@ -12,11 +12,11 @@ const NavBar = () => {
 
         <div class="navbar">
             {/* <Tooltip title="Home" /> */}
-            <Link class="navbuttons" to="/"><HomeOutline /></Link>
+            <Link class="navbuttons" to="/"><abbr title="Home"><HomeOutline /></abbr></Link>
 
-            <Link class="navbuttons" to="/journal"><BookOpenOutline /></Link>
-            <Link class="navbuttons" to="/activities"><EmojiHappyOutline /></Link>
-            <Link class="navbuttons" to="/detail"><PresentationChartBarOutline /></Link>
+            <Link class="navbuttons" to="/journal"><abbr title="Journal"><BookOpenOutline /></abbr></Link>
+            <Link class="navbuttons" to="/activities"><abbr title="Activities"><EmojiHappyOutline /></abbr></Link>
+            <Link class="navbuttons" to="/detail"><abbr title="My Stats"><PresentationChartBarOutline /></abbr></Link>
 
         </div>
 
