@@ -1,6 +1,6 @@
 const Breathe = () => {
     return (
-        <h2>Please keep breathing</h2>
+        <h2>Breathe</h2>
     )
 }
 

@@ -10,23 +10,26 @@ const Activities = () => {
     return (
         <>
             <h2>Activities</h2>
-            <Link to="/meditate">
-                <button class="navbuttons" >
-                    Meditate
-        </button>
-            </Link>
+            <div class="navbar">
 
-            <Link to="/breathe">
-                <button class="navbuttons" >Breathe</button>
-            </Link>
+                <Link to="/meditate">
+                    <button class="navbuttons" >
+                        Meditate
+         </button>
+                </Link>
 
-            <Link to="/yoga">
-                <button class="navbuttons" >Yoga</button>
-            </Link>
+                <Link to="/breathe">
+                    <button class="navbuttons" >Breathe</button>
+                </Link>
 
-            <Link to="/inspire">
-                <button class="navbuttons" >Inspire</button>
-            </Link>
+                <Link to="/yoga">
+                    <button class="navbuttons" >Yoga</button>
+                </Link>
+
+                <Link to="/inspire">
+                    <button class="navbuttons" >Inspire</button>
+                </Link>
+            </div>
         </>
     )
 }

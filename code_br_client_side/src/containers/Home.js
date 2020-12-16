@@ -1,5 +1,5 @@
-import {React, useState, useEffect} from "react";
-import {BrowserRouter as Router, Route, Switch, RefreshRoute} from "react-router-dom";
+import { React, useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, RefreshRoute } from "react-router-dom";
 import NavBar from '../components/NavBar';
 import StartScreen from '../components/StartScreen'
 
@@ -20,22 +20,22 @@ import Loading from '../components/Loading';
 
 const Home = () => {
 
-      
+
   const [onWelcome, setOnWelcome] = useState(true);
-  const [diaryEntry, setDiaryEntry] =useState({});
+  const [diaryEntry, setDiaryEntry] = useState({});
   const [selectedDiaryEntry, setselectedDiaryEntry] = useState(0)
   // const [loaded, setLoaded] = useState(false)
   const getData = () => {
     fetch("http://localhost:8080/diaryentry")
-        .then(response => response.json())
-        .then(results => setDiaryEntry(results))
-        // .then(() => setLoaded(true))
-        // console.log(diaryEntries);
-};
+      .then(response => response.json())
+      .then(results => setDiaryEntry(results))
+    // .then(() => setLoaded(true))
+    // console.log(diaryEntries);
+  };
 
 
 
-useEffect(()=>{
+  useEffect(() => {
     const loadTimer = setTimeout(() => {
       setOnWelcome(false)
     }, 5000)
@@ -44,61 +44,63 @@ useEffect(()=>{
 
 
   return (
-      <Router>
-        <>
+    <Router>
+      <>
+        <h1 class="heading">code&lt;br&gt;</h1>
+
+        <Switch>
+          <Route exact path="/" component={StartScreen} />
+          {/* <RefreshRoute exact path="/" component={StartScreen} /> */}
+          <Route path="/journal" component={Journal} />
+          <Route path="/activities" component={Activities} />
+          {/* <Route path="/mystats" component={Stats}/> */}
+          <Route path="/meditate" component={Meditate} />
+          <Route path="/yoga" component={Yoga} />
+          <Route path="/inspire" component={Inspire} />
+          <Route path="/breathe" component={Breathe} />
+          <Route path="/mood" component={Mood} />
+          <Route path="/sleep" component={Sleep} />
+          <Route path="/detail" render={(props) => <Detail {...props} diaryEntry={diaryEntry} />} />
+          <Route path="/tracker" component={Tracker} />
+          <Route path="/waterintake" component={WaterIntake} />
+          <Route path="/screentime" component={Screentime} />
+        </Switch>
         <NavBar />
-          <Switch>
-            <Route exact path="/" component={StartScreen} />
-            {/* <RefreshRoute exact path="/" component={StartScreen} /> */}
-            <Route path="/journal" component={Journal}/>
-            <Route path="/activities" component={Activities}/>
-            {/* <Route path="/mystats" component={Stats}/> */}
-            <Route path="/meditate" component={Meditate}/>
-            <Route path="/yoga" component={Yoga}/>
-            <Route path="/inspire" component={Inspire}/>
-            <Route path="/breathe" component={Breathe}/>
-            <Route path="/mood" component={Mood}/>
-            <Route path="/sleep" component={Sleep}/>
-            <Route path="/detail"  render={(props)=> <Detail {...props} diaryEntry={diaryEntry}/>}/>
-            <Route path="/tracker" component={Tracker}/>
-            <Route path="/waterintake" component={WaterIntake}/>
-            <Route path="/screentime" component={Screentime}/>
-          </Switch>  
-        </>
-      </Router>
+      </>
+    </Router>
   );
 
-//     return (
-//         <>
-//             <h2>Home</h2>
+  //     return (
+  //         <>
+  //             <h2>Home</h2>
 
-//             <Link to= "/sleep">
-//                 <button>Sleep</button>
-//             </Link>
+  //             <Link to= "/sleep">
+  //                 <button>Sleep</button>
+  //             </Link>
 
-//             <Link to= "/mood">
-//                 <button>Mood</button>
-//             </Link>
+  //             <Link to= "/mood">
+  //                 <button>Mood</button>
+  //             </Link>
 
-//             <Link to="/waterintake">
-//                 <button>Water Intake</button>
-//             </Link>
+  //             <Link to="/waterintake">
+  //                 <button>Water Intake</button>
+  //             </Link>
 
-//             <Link to= "/screentime">
-//                 <button>Screentime</button>
-//             </Link>
-
-
-//             <Link to= "/detail">
-//                 <button>Detail</button>
-//             </Link>
+  //             <Link to= "/screentime">
+  //                 <button>Screentime</button>
+  //             </Link>
 
 
-//             <Link to= "/tracker">
-//                 <button>Tracker</button>
-//             </Link>
-//         </>
-//     )
+  //             <Link to= "/detail">
+  //                 <button>Detail</button>
+  //             </Link>
+
+
+  //             <Link to= "/tracker">
+  //                 <button>Tracker</button>
+  //             </Link>
+  //         </>
+  //     )
 }
 
 export default Home;
