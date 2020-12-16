@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, RefreshRoute} from "react-router-dom";
 import NavBar from '../components/NavBar';
 import StartScreen from '../components/StartScreen'
 
@@ -49,6 +49,7 @@ useEffect(()=>{
         <NavBar />
           <Switch>
             <Route exact path="/" component={StartScreen} />
+            {/* <RefreshRoute exact path="/" component={StartScreen} /> */}
             <Route path="/journal" component={Journal}/>
             <Route path="/activities" component={Activities}/>
             {/* <Route path="/mystats" component={Stats}/> */}
