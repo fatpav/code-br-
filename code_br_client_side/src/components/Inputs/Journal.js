@@ -2,11 +2,13 @@ const Journal = () => {
     return (
         <>
             <h2>Journal</h2>
-            <ul>
-                <li>This is where our entries go</li>
-            </ul>
-            <input type="text" placeholder="Tell me about your feelings" />
-            <button type="submit">Save</button>
+            <h2>Dropdown of Journal Entries by Date</h2>
+            <div class="journalform">
+                <input id="inputbox" placeholder="How did you feel today?" />
+            </div>
+            <div class="navbar">
+                <button class="navbuttons" type="submit">Save</button>
+            </div>
         </>
     )
 };
