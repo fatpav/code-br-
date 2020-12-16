@@ -62,7 +62,8 @@ const Sleep = ({diary, handleUpdate}) => {
                             max={10}
                             onChange={handleChange}
                         />
-                    <form onSubmit={submitForm} >
+                    <form 
+                        onSubmit={submitForm} >
                     <button type="submit">Submit Sleep</button>
                     </form>        
                     </div>
