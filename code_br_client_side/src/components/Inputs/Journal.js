@@ -59,6 +59,9 @@ const Journal = ({diary, handleUpdate}) => {
                 <button class="navbuttons" type="submit">Add Entry</button>
                 </form> 
             </div>
+            <div class="navbar">
+            <a href="/detail" class="navbuttons">See your day's stats.</a>
+            </div>
         </>
     )
 };

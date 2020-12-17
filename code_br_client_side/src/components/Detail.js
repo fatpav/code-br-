@@ -13,11 +13,21 @@ const Detail = ({diaryEntry}) => {
 
     return(
         <>
-        <h2>Latest Stats</h2>
-            <h3>Date: {diaryEntry[diaryEntry.length -2].date}</h3>
-            <h3>Water Intake: {diaryEntry[diaryEntry.length -2].waterIntake.litres} litres</h3>
-            <h3>Sleep time: {diaryEntry[diaryEntry.length -2].sleep.hours} hours</h3>
-            <h3>Journal Entry: {diaryEntry[diaryEntry.length -2].journal.journal_entry}</h3>
+        <div>
+            <h2>Your stats today.</h2>
+        </div>
+            <div class="navbar">
+                <ul class="detail-list">
+                <li>Date: {diaryEntry[diaryEntry.length -1].date}</li>
+                <br/>
+                <li>Water Intake: {diaryEntry[diaryEntry.length -1].waterIntake.litres} litres</li>
+                <br/>
+                <li>Sleep time: {diaryEntry[diaryEntry.length -1].sleep.hours} hours</li>
+                <br/>
+                <li>Journal Entry: {diaryEntry[diaryEntry.length -1].journal.journal_entry}</li>
+                </ul>
+            </div>
+        
         </>
     )
 };
