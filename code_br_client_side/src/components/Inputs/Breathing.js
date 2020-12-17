@@ -2,30 +2,29 @@ import {useState} from 'react';
 import {Slider, Typography} from '@material-ui/core';
 import axios from 'axios';
 
+const Breathing = ({diary, handleUpdate}) => {
 
-const Screentime = ({diary, handleUpdate}) => {
-
-    const [screenTime, setScreenTime] = useState(0)
+    const [breathing, setBreathing] = useState(0)
    
 
     const handleChange = (event, value) => {
-        setScreenTime(value);
+        setBreathing(value);
         };
     
 
     const submitForm = (event) => {
         event.preventDefault();
         const data = {
-                hours: screenTime
+                minutes: breathing
           };
         axios({
           method: "post",
-          url: `http://localhost:8080/screentime`,
+          url: `http://localhost:8080/breathe`,
           data
         })
         .then(
             res => {
-                handleUpdate("screenTime", res.data)   
+                handleUpdate("breathing", res.data)   
                 // console.log(diary)        
                 axios.put(`http://localhost:8080/diaryentry/${diary.id}`, diary,
                 {
@@ -46,28 +45,29 @@ const Screentime = ({diary, handleUpdate}) => {
         };
 
 
-    return(
+
+    return (
         <div>
-        <p>Wow; Stop staring at a screen, Nerd ! </p>
-            <Typography id="discrete-slider" gutterBottom>
-                ScreenTime ?
-            </Typography>
-            <Slider
-                defaultValue={screenTime}
-                aria-labelledby="discrete-slider"
-                valueLabelDisplay="auto"
-                step={0.5}
-                marks
-                min={0}
-                max={12}
-            />
+            <p>Take a breathe.... </p>
+                <Typography id="discrete-slider" gutterBottom>
+                    Deep breath
+                </Typography>
+                <Slider
+                    defaultValue={breathing}
+                    aria-labelledby="discrete-slider"
+                    valueLabelDisplay="auto"
+                    step={1}
+                    marks
+                    min={0}
+                    max={30}
+                />
             <form 
                 onSubmit={submitForm} >
             <button type="submit">Add Entry</button>
             </form>  
+      </div>
         
-    </div>
     )
-};
+}
 
-export default Screentime;
+export default Breathing;
