@@ -4,10 +4,11 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(138deg, #6a8bbe, #b1e0a5);
+  background-color: #9fcd80;
+  /* background: linear-gradient(138deg, #6a8bbe, #b1e0a5);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite; */
     
 }
 
@@ -127,6 +128,18 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
   align-items: center;
   justify-content: center;
 }
+
+.chartholder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chart{
+  width: 48vw;
+}
+
+
 
 #inputbox{
   height: 50px;

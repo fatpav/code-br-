@@ -52,7 +52,7 @@ const Tracker = ({ diaryEntry }) => {
     legend: { position: "bottom" },
     lineWidth: 5,
     series: {
-      0: { color: '#191170' }
+      0: { color: '#ad5100' }
     },
     backgroundColor: 'transparent',
     fontName: 'Quicksand',
@@ -82,7 +82,7 @@ const Tracker = ({ diaryEntry }) => {
     legend: { position: "bottom" },
     lineWidth: 5,
     series: {
-      0: { color: '#191170' }
+      0: { color: '#ad0000' }
     },
     backgroundColor: 'transparent',
     fontName: 'Quicksand',
@@ -104,14 +104,14 @@ const Tracker = ({ diaryEntry }) => {
     [diaryEntry[5].date, diaryEntry[5].meditation.minutes],
     [diaryEntry[6].date, diaryEntry[6].meditation.minutes]
   ];
-  
+
   const meditationOptions = {
     title: "Meditation Time",
     curveType: "function",
     legend: { position: "bottom" },
     lineWidth: 5,
     series: {
-      0: { color: '#191170' }
+      0: { color: '#8d00ad' }
     },
     backgroundColor: 'transparent',
     fontName: 'Quicksand',
@@ -124,41 +124,43 @@ const Tracker = ({ diaryEntry }) => {
   return (
     <>
       <h2>Tracker</h2>
-      <div className="chart">
-        <Chart
-          chartType="LineChart"
-          width="100%"
-          height="200px"
-          data={data}
-          options={options}
-        />
-      </div>
-      <div className="chart">
-        <Chart
-          chartType="LineChart"
-          width="100%"
-          height="200px"
-          data={sleepData}
-          options={sleepOptions}
-        />
-      </div>
-      <div className="chart">
-        <Chart
-          chartType="LineChart"
-          width="100%"
-          height="200px"
-          data={screenTimeData}
-          options={screenTimeOptions}
-        />
-      </div>
-      <div className="chart">
-        <Chart
-          chartType="LineChart"
-          width="100%"
-          height="200px"
-          data={meditationData}
-          options={meditationOptions}
-        />
+      <div class="chartholder" >
+        <div className="chart">
+          <Chart
+            chartType="LineChart"
+            width="100%"
+            height="200px"
+            data={data}
+            options={options}
+          />
+        </div>
+        <div className="chart">
+          <Chart
+            chartType="LineChart"
+            width="100%"
+            height="200px"
+            data={sleepData}
+            options={sleepOptions}
+          />
+        </div>
+        <div className="chart">
+          <Chart
+            chartType="LineChart"
+            width="100%"
+            height="200px"
+            data={screenTimeData}
+            options={screenTimeOptions}
+          />
+        </div>
+        <div className="chart">
+          <Chart
+            chartType="LineChart"
+            width="100%"
+            height="200px"
+            data={meditationData}
+            options={meditationOptions}
+          />
+        </div>
       </div>
     </>
   )
