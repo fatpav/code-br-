@@ -48,9 +48,9 @@ const Meditation = ({diary, handleUpdate}) => {
 
     return (
         <div>
-            <p>Taken yer meds ??? </p>
+            <p>Meditation</p>
                 <Typography id="discrete-slider" gutterBottom>
-                    ommmmmmmmmmm
+                    How long have you practiced?
                 </Typography>
                 <Slider
                     defaultValue={meditation}

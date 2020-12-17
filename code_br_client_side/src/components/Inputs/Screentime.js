@@ -48,9 +48,9 @@ const Screentime = ({diary, handleUpdate}) => {
 
     return(
         <div>
-        <p>Wow; Stop staring at a screen, Nerd ! </p>
+        <p>Screentime </p>
             <Typography id="discrete-slider" gutterBottom>
-                ScreenTime ?
+                How many hours have you spent in front of a screen ?
             </Typography>
             <Slider
                 defaultValue={screenTime}

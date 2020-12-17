@@ -48,9 +48,9 @@ const WaterIntake = ({diary, handleUpdate}) => {
 
     return (
         <div>
-            <p>Is your pee clear ??? </p>
+            <p>Water Intake </p>
                 <Typography id="discrete-slider" gutterBottom>
-                    WATER ?
+                    How much water have you drank? (Litres)
                 </Typography>
                 <Slider
                     defaultValue={waterIntake}

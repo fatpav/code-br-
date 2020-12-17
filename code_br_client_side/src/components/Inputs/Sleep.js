@@ -71,7 +71,7 @@ const Sleep = ({ diary, handleUpdate }) => {
 
     return (
         <>
-            <div class="slidercenter">
+            <div className="slidercenter">
                 <p>How many hours sleep did you get?</p>
                 <Typography id="discrete-slider" gutterBottom>
                     <MoonOutline />

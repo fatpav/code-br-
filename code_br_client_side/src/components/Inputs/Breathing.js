@@ -48,9 +48,9 @@ const Breathing = ({diary, handleUpdate}) => {
 
     return (
         <div>
-            <p>Take a breathe.... </p>
+            <p>Breathing</p>
                 <Typography id="discrete-slider" gutterBottom>
-                    Deep breath
+                    How long have you spent doing breathing exercises?
                 </Typography>
                 <Slider
                     defaultValue={breathing}
