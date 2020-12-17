@@ -95,7 +95,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     marks
                     min={0}
                     max={5}
-                    onChange={handleChange, handleSlide}
+                    onChange={handleChange}
                     color='#191170'
                 />
                 </ThemeProvider>

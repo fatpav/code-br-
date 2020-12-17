@@ -92,7 +92,7 @@ const Screentime = ({diary, handleUpdate}) => {
             </Typography>
             <ThemeProvider theme={sliderTheme}>
             <Slider
-                onChange= {handleChange, handleSlide}
+                onChange= {handleChange}
                 defaultValue={screenTime}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"

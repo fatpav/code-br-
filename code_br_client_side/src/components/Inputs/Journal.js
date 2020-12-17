@@ -4,6 +4,15 @@ import axios from 'axios';
 const Journal = ({diary, handleUpdate}) => {
 
     const [journal, setJournal] = useState("")
+    const [buttonText, setButtonText] = useState("Add Entry");
+    const [disabled, setDisabled] = useState(false);
+
+    function buttonChange() {
+        if(disabled === false){
+           setButtonText("Submitted")
+           setDisabled(true)
+        }
+   };
    
 
     const handleChange = (event) => {
@@ -56,7 +65,7 @@ const Journal = ({diary, handleUpdate}) => {
                 
                 <form
                     onSubmit={submitForm} >
-                <button class="navbuttons" type="submit">Add Entry</button>
+                <button class="navbuttons" type="submit" onClick={buttonChange}>{buttonText}</button>
                 </form> 
             </div>
             <div class="navbar">

@@ -98,7 +98,7 @@ const Meditation = ({diary, handleUpdate}) => {
                     marks
                     min={0}
                     max={60}
-                    onChange={handleChange, handleSlide}
+                    onChange={handleChange}
                     color='#191170'
                 />
                 </ThemeProvider>
