@@ -4,18 +4,15 @@ import { Chart } from "react-google-charts";
 
 const Tracker = ({ diaryEntry }) => {
 
-  const [index, setIndex] = useState(0);
-  
-
   const data = [
     ["Date", "Litres"],
-    [diaryEntry[index].date, diaryEntry[index].waterIntake.litres],
-    [diaryEntry[index +1].date, diaryEntry[index +1].waterIntake.litres],
-    [diaryEntry[index +2].date, diaryEntry[index +2].waterIntake.litres],
-    [diaryEntry[index +3].date, diaryEntry[index +3].waterIntake.litres],
-    [diaryEntry[index +4].date, diaryEntry[index +4].waterIntake.litres],
-    [diaryEntry[index +5].date, diaryEntry[index +5].waterIntake.litres],
-    [diaryEntry[index +6].date, diaryEntry[index +6].waterIntake.litres]
+    [diaryEntry[0].date, diaryEntry[0].waterIntake.litres],
+    [diaryEntry[1].date, diaryEntry[1].waterIntake.litres],
+    [diaryEntry[2].date, diaryEntry[2].waterIntake.litres],
+    [diaryEntry[3].date, diaryEntry[3].waterIntake.litres],
+    [diaryEntry[4].date, diaryEntry[4].waterIntake.litres],
+    [diaryEntry[5].date, diaryEntry[5].waterIntake.litres],
+    [diaryEntry[6].date, diaryEntry[6].waterIntake.litres]
   ];
 
 
@@ -39,13 +36,13 @@ const Tracker = ({ diaryEntry }) => {
 
   const sleepData = [
     ["Date", "Hours"],
-    [diaryEntry[index].date, diaryEntry[index].sleep.hours],
-    [diaryEntry[index +1].date, diaryEntry[index +1].sleep.hours],
-    [diaryEntry[index +2].date, diaryEntry[index +2].sleep.hours],
-    [diaryEntry[index +3].date, diaryEntry[index +3].sleep.hours],
-    [diaryEntry[index +4].date, diaryEntry[index +4].sleep.hours],
-    [diaryEntry[index +5].date, diaryEntry[index +5].sleep.hours],
-    [diaryEntry[index +6].date, diaryEntry[index +6].sleep.hours]
+    [diaryEntry[0].date, diaryEntry[0].sleep.hours],
+    [diaryEntry[1].date, diaryEntry[1].sleep.hours],
+    [diaryEntry[2].date, diaryEntry[2].sleep.hours],
+    [diaryEntry[3].date, diaryEntry[3].sleep.hours],
+    [diaryEntry[4].date, diaryEntry[4].sleep.hours],
+    [diaryEntry[5].date, diaryEntry[5].sleep.hours],
+    [diaryEntry[6].date, diaryEntry[6].sleep.hours]
   ];
 
 
@@ -55,7 +52,7 @@ const Tracker = ({ diaryEntry }) => {
     legend: { position: "bottom" },
     lineWidth: 5,
     series: {
-      0: { color: '#191170' }
+      0: { color: '#ad5100' }
     },
     backgroundColor: 'transparent',
     fontName: 'Quicksand',
@@ -69,13 +66,13 @@ const Tracker = ({ diaryEntry }) => {
 
   const screenTimeData = [
     ["Date", "Hours"],
-    [diaryEntry[index].date, diaryEntry[index].screenTime.hours],
-    [diaryEntry[index +1].date, diaryEntry[index +1].screenTime.hours],
-    [diaryEntry[index +2].date, diaryEntry[index +2].screenTime.hours],
-    [diaryEntry[index +3].date, diaryEntry[index +3].screenTime.hours],
-    [diaryEntry[index +4].date, diaryEntry[index +4].screenTime.hours],
-    [diaryEntry[index +5].date, diaryEntry[index +5].screenTime.hours],
-    [diaryEntry[index +6].date, diaryEntry[index +6].screenTime.hours]
+    [diaryEntry[0].date, diaryEntry[0].screenTime.hours],
+    [diaryEntry[1].date, diaryEntry[1].screenTime.hours],
+    [diaryEntry[2].date, diaryEntry[2].screenTime.hours],
+    [diaryEntry[3].date, diaryEntry[3].screenTime.hours],
+    [diaryEntry[4].date, diaryEntry[4].screenTime.hours],
+    [diaryEntry[5].date, diaryEntry[5].screenTime.hours],
+    [diaryEntry[6].date, diaryEntry[6].screenTime.hours]
   ];
 
 
@@ -85,7 +82,7 @@ const Tracker = ({ diaryEntry }) => {
     legend: { position: "bottom" },
     lineWidth: 5,
     series: {
-      0: { color: '#191170' }
+      0: { color: '#ad0000' }
     },
     backgroundColor: 'transparent',
     fontName: 'Quicksand',
@@ -96,17 +93,33 @@ const Tracker = ({ diaryEntry }) => {
     }
 
   };
-  
+
   const meditationData = [
     ["Date", "Minutes"],
-    [diaryEntry[index].date, diaryEntry[index].meditation.minutes],
-    [diaryEntry[index +1].date, diaryEntry[index +1].meditation.minutes],
-    [diaryEntry[index +2].date, diaryEntry[index +2].meditation.minutes],
-    [diaryEntry[index +3].date, diaryEntry[index +3].meditation.minutes],
-    [diaryEntry[index +4].date, diaryEntry[index +4].meditation.minutes],
-    [diaryEntry[index +5].date, diaryEntry[index +5].meditation.minutes],
-    [diaryEntry[index +6].date, diaryEntry[index +6].meditation.minutes]
+    [diaryEntry[0].date, diaryEntry[0].meditation.minutes],
+    [diaryEntry[1].date, diaryEntry[1].meditation.minutes],
+    [diaryEntry[2].date, diaryEntry[2].meditation.minutes],
+    [diaryEntry[3].date, diaryEntry[3].meditation.minutes],
+    [diaryEntry[4].date, diaryEntry[4].meditation.minutes],
+    [diaryEntry[5].date, diaryEntry[5].meditation.minutes],
+    [diaryEntry[6].date, diaryEntry[6].meditation.minutes]
   ];
+
+  const meditationOptions = {
+    title: "Meditation Time",
+    curveType: "function",
+    legend: { position: "bottom" },
+    lineWidth: 5,
+    series: {
+      0: { color: '#8d00ad' }
+    },
+    backgroundColor: 'transparent',
+    fontName: 'Quicksand',
+    textStyle: {
+      color: '#F191170',
+      fontName: 'Quicksand',
+      fontSize: '10'
+    }
   }
   return (
     <>
