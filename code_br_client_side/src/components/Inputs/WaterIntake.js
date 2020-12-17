@@ -91,7 +91,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     defaultValue={waterIntake}
                     aria-labelledby="discrete-slider"
                     valueLabelDisplay="auto"
-                    step={0.25}
+                    step={1}
                     marks
                     min={0}
                     max={5}
