@@ -6,7 +6,12 @@ import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
 import { MoonOutline } from "heroicons-react";
 
-const Sleep = ({ diary, handleUpdate }) => {
+const Sleep = ({ diary, handleUpdate, buttonChange, handleSlide }) => {
+
+    const [sleep, setSleep] = useState(0);
+    const [buttonText, setButtonText] = useState("Add Entry");
+    const [disabled, setDisabled] = useState(false);
+
 
     const sliderTheme = createMuiTheme({
         overrides: {
@@ -26,11 +31,6 @@ const Sleep = ({ diary, handleUpdate }) => {
             }
         }
     })
-
-
-
-    const [sleep, setSleep] = useState(0)
-
 
     const handleChange = (event, value) => {
         setSleep(value);
@@ -87,14 +87,14 @@ const Sleep = ({ diary, handleUpdate }) => {
                         marks
                         min={0}
                         max={10}
-                        onChange={handleChange}
+                        onChange={handleChange, handleSlide}
                         color='#191170'
                     />
                 </ThemeProvider>
                 <form 
-                    onSubmit={submitForm} >
-                        <button className="navbuttons" type="submit">Add Entry</button>
-                </form>
+                onSubmit={submitForm} >
+                    <button className="navbuttons" onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
+            </form>  
             </div>
         </>
     );

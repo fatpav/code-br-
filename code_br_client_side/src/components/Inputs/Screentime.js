@@ -5,24 +5,12 @@ import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
 import { MoonOutline } from "heroicons-react";
 
-const Screentime = ({diary, handleUpdate}) => {
+const Screentime = ({diary, handleUpdate,buttonChange, handleSlide}) => {
 
     const [screenTime, setScreenTime] = useState(0);
     const [buttonText, setButtonText] = useState("Add Entry");
-    const [disabled, setDisabled] = useState(false)
+    const [disabled, setDisabled] = useState(false);
    
-   
-    function buttonChange() {
-        if(disabled === false){
-           setButtonText("Submitted")
-           setDisabled(true)
-        }
-   };
-
-   function handleSlide() {
-           setButtonText("Update Entry")
-           setDisabled(false)
-   };
 
     const sliderTheme = createMuiTheme({
         overrides: {
@@ -89,7 +77,7 @@ const Screentime = ({diary, handleUpdate}) => {
             </Typography>
             <ThemeProvider theme={sliderTheme}>
             <Slider
-                onChange= {handleSlide}
+                onChange= {handleChange, handleSlide}
                 defaultValue={screenTime}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -102,10 +90,8 @@ const Screentime = ({diary, handleUpdate}) => {
             </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
-               
-            <button className="navbuttons" onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
+                    <button className="navbuttons" onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
             </form>  
-        
     </div>
     )
 };

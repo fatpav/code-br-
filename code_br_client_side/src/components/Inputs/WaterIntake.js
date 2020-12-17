@@ -5,7 +5,12 @@ import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
 import { MoonOutline } from "heroicons-react";
 
-const WaterIntake = ({diary, handleUpdate}) => {
+const WaterIntake = ({diary, handleUpdate, buttonChange, handleSlide}) => {
+
+    const [waterIntake, setWaterIntake] = useState(0);
+    const [buttonText, setButtonText] = useState("Add Entry");
+    const [disabled, setDisabled] = useState(false);
+
 
     const sliderTheme = createMuiTheme({
         overrides: {
@@ -25,9 +30,6 @@ const WaterIntake = ({diary, handleUpdate}) => {
             }
         }
     })
-
-    const [waterIntake, setWaterIntake] = useState(0)
-   
 
     const handleChange = (event, value) => {
         setWaterIntake(value);
@@ -67,7 +69,6 @@ const WaterIntake = ({diary, handleUpdate}) => {
         };
 
 
-
     return (
         <div className="slidercenter">
             {/* <p>Water Intake </p> */}
@@ -83,13 +84,13 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     marks
                     min={0}
                     max={5}
-                    onChange={handleChange}
+                    onChange={handleChange, handleSlide}
                     color='#191170'
                 />
                 </ThemeProvider>
-            <form 
+                <form 
                 onSubmit={submitForm} >
-                    <button className="navbuttons" type="submit">Add Entry</button>
+                    <button className="navbuttons" onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
             </form>  
       </div>
         
