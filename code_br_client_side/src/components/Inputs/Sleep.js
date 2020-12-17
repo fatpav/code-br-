@@ -83,7 +83,7 @@ const Sleep = ({diary, handleUpdate}) => {
                         />
                         </ThemeProvider>
                     <form onSubmit={submitForm} >
-                    <button class="navbuttons" type="submit">Submit Sleep</button>
+                    <button class="navbuttons" type="submit">Add Entry</button>
                     </form>        
                     </div>
                 );
