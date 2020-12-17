@@ -85,7 +85,6 @@ const Screentime = ({diary, handleUpdate}) => {
                 color='#191170'
                 />
             </ThemeProvider>
-            />
             <form 
                 onSubmit={submitForm} >
                     <button className="navbuttons" type="submit">Add Entry</button>
