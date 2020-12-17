@@ -53,8 +53,9 @@ const Sleep = ({ diary, handleUpdate}) => {
     const submitForm = (event) => {
         event.preventDefault();
         const data = {
-            hours: sleep
+            hours: sleep    
         };
+        console.log("FUCK ME")
         axios({
             method: "post",
             url: `http://localhost:8080/sleep`,

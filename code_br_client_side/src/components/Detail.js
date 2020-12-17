@@ -2,19 +2,10 @@ import {useState, useEffect} from 'react';
 
 const Detail = ({diaryEntry}) => {
 
-    // const [loaded, setLoaded] =useState(false);
-
-    // useEffect(()=> {
-    //     if (!diaryEntry){
-            
-    //     }
-
-    // });
-
     return(
         <>
         <div>
-            <h2>Your stats today.</h2>
+            <h2>Your stats today</h2>
         </div>
             <div class="navbar">
                 <ul class="detail-list">

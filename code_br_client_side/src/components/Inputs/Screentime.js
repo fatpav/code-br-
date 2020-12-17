@@ -105,7 +105,7 @@ const Screentime = ({diary, handleUpdate}) => {
             </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
-                    <button className="navbuttons" onClick={buttonChange} type="submit">{buttonText}</button>
+                    <button type="submit" className="navbuttons" onClick={buttonChange} type="submit">{buttonText}</button>
             </form>  
     </div>
     )

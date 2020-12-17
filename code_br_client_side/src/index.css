@@ -8,7 +8,7 @@ body {
     background-size: 400% 400%;
     -webkit-animation: AnimationName 10s ease infinite;
     animation: AnimationName 10s ease infinite;
-  background-color: #9FCD80;
+  /* background-color: #9FCD80; */
     
 }
 
