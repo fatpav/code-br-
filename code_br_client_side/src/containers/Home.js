@@ -73,7 +73,7 @@ const handleUpdate = (property, value) => {
               <Route path="/mood" component={Mood}/>
               <Route path="/sleep" component={Sleep}/>
               <Route path="/detail"  render={(props)=> <Detail {...props} diaryEntry={diaryEntry}/>}/>
-              <Route path="/tracker" component={Tracker}/>
+              <Route path="/tracker" render={(props)=> <Tracker {...props} diaryEntry={diaryEntry}/>}/>
               <Route path="/waterintake" component={WaterIntake}/>
               <Route path="/screentime" component={Screentime}/>
               

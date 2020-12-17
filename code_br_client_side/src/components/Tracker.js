@@ -2,17 +2,17 @@ import * as React from "react";
 import { render } from "react-dom";
 import { Chart } from "react-google-charts";
 
-const Tracker = () => {
+const Tracker = ({diaryEntry}) => {
 
     const data = [
         ["Date", "Litres"],
-        ["12-12-20", 1.5],
-        ["13-12-20", 2],
-        ["14-12-20", 2.5],
-        ["15-12-20", 1.4],
-        ["16-12-20", 1.4],
-        ["17-12-20", 2.4],
-        ["18-12-20", 3.1]
+        [diaryEntry[0].date, diaryEntry[0].waterIntake.litres],
+        [diaryEntry[1].date, diaryEntry[1].waterIntake.litres],
+        [diaryEntry[2].date, diaryEntry[2].waterIntake.litres],
+        [diaryEntry[3].date, diaryEntry[3].waterIntake.litres],
+        [diaryEntry[4].date, diaryEntry[4].waterIntake.litres],
+        [diaryEntry[5].date, diaryEntry[5].waterIntake.litres],
+        [diaryEntry[6].date, diaryEntry[6].waterIntake.litres]
       ];
     
 
