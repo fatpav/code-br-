@@ -3,7 +3,7 @@ import Loading from './Loading';
 import {ThumbUpOutline} from 'heroicons-react';
 import DiaryForm from '../components/Inputs/DiaryForm';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 
 
 const StartScreen = ({diaryEntry, handleUpdate}) =>{
@@ -58,7 +58,13 @@ const StartScreen = ({diaryEntry, handleUpdate}) =>{
             <input type="text" value={today} />
             <button class="navbuttons"type="submit">Create New Diary Entry</button>
             </form>  
-        </div>          
+        </div>
+
+        {/* <div>
+        <audio class="audio-element">
+          <source src="https://www.soundjay.com/nature/sounds/ocean-wave-1.mp3"></source>
+        </audio>
+      </div>           */}
         </>
     )
 }

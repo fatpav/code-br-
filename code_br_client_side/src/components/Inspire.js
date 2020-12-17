@@ -1,4 +1,10 @@
+import React from 'react';
+import {useState, useEffect} from 'react';
+
 const Inspire = () => {
+
+    const [quote, setQuote] = useState()
+
 
     const inspoQuotes = [
 
@@ -24,15 +30,20 @@ const Inspire = () => {
 
     function getRandomQuote() {
         const randomQuote = inspoQuotes[Math.floor(Math.random() * inspoQuotes.length)]
-        return randomQuote
+        setQuote(randomQuote)
     }
+    
+    useEffect(()=>{ getRandomQuote()}, [])
 
     // console.log(getRandomQuote());
 
     return (
         <>
             <h2>Inspiration</h2>
-            <div class="inspoquote">"{getRandomQuote()}"</div>
+            <div class="inspoquote">"{quote}"</div>
+            <div class="navbar">
+            <button class="navbuttons"onClick={getRandomQuote}>More inspiration</button>
+            </div>
             {/* <form>
             <input onClick={getRandomQuote} type="submit"> New Quote</input>
             </form> */}
