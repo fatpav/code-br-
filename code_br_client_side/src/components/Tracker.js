@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { Chart } from "react-google-charts";
+import Detail from './Detail';
 
 const Tracker = () => {
 
