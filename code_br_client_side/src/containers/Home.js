@@ -45,7 +45,7 @@ const handleUpdate = (property, value) => {
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setOnWelcome(false)
-    }, 1000)
+    }, 2000)
     getData();
   }, [selectedDiaryEntry])
 
