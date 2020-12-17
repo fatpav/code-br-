@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import Timer from './Timer';
+
 
 const Meditate = () => {
+    
+
+
     return (
         <>
             <h2>Meditate</h2>
@@ -13,9 +18,9 @@ const Meditate = () => {
             {/* <ReactPlayer 
             url="https://soundcloud.com/user-16685247/sets/codebreak-reiki-zen" playing={true}>
             </ReactPlayer> */}
-
+            <Timer />
         </>
-    )
+    );
 };
 
 export default Meditate;
