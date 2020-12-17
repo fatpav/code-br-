@@ -103,7 +103,7 @@ const Tracker = ({ diaryEntry }) => {
     [diaryEntry[14].date, diaryEntry[14].meditation.minutes],
     [diaryEntry[15].date, diaryEntry[15].meditation.minutes],
     [diaryEntry[16].date, diaryEntry[16].meditation.minutes],
-    [diaryEntry[17].date, diaryEntry[diaryEntry.length -1].meditation.minutes]
+    [diaryEntry[diaryEntry.length -1].date, diaryEntry[diaryEntry.length -1].meditation.minutes]
   ];
 
   const meditationOptions = {

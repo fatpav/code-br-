@@ -56,7 +56,7 @@ const Journal = ({diary, handleUpdate}) => {
     return (
         <>
             <h2>Journal</h2>
-            <h2>Dropdown of Journal Entries by Date</h2>
+            <h2>Remind yourself about the day</h2>
             <div class="journalform">
                 <input onChange={handleChange} type="text" id="inputbox" placeholder="How did you feel today?" />
             </div>
