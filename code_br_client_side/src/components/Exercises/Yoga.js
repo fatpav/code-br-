@@ -6,6 +6,7 @@ const Yoga = () => {
 
         <>
             <h2>Yoga</h2>
+            <h2>These easy videos will help you exercise no matter how long your break!</h2>
             <div class="yogabox">
 
 

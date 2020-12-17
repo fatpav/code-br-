@@ -50,7 +50,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
     const submitForm = (event) => {
         event.preventDefault();
         const data = {
-                hours: waterIntake
+                litres: waterIntake
           };
         axios({
           method: "post",
@@ -91,7 +91,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     defaultValue={waterIntake}
                     aria-labelledby="discrete-slider"
                     valueLabelDisplay="auto"
-                    step={1}
+                    step={0.25}
                     marks
                     min={0}
                     max={5}
