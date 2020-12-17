@@ -26,9 +26,9 @@ const Timer = () => {
         return () => clearInterval(interval);
     }, [isActive, seconds]);
 
-    
+
   return (
-          <div className="timerholder">
+          <div className="navbar">
                 {seconds}s
             <button className={`navbuttons button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
                 {isActive ? 'Pause' : 'Start'}
