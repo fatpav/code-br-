@@ -1,7 +1,7 @@
-const Mood = () => {
-    return (
-        <h2>Feelin fine, man.</h2>
+// const Mood = () => {
+//     return (
+//         <h2>Feelin fine, man.</h2>
        
-    )
-};
-export default Mood;
+//     )
+// };
+// export default Mood;

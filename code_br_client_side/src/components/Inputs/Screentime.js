@@ -1,7 +1,9 @@
-import {useState} from 'react';
-import {Slider, Typography} from '@material-ui/core';
+import { useState } from 'react';
+import { Slider, Typography } from '@material-ui/core';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
-
+import { MoonOutline } from "heroicons-react";
 
 const Screentime = ({diary, handleUpdate}) => {
 
@@ -22,7 +24,24 @@ const Screentime = ({diary, handleUpdate}) => {
            setDisabled(false)
    };
 
-   
+    const sliderTheme = createMuiTheme({
+        overrides: {
+            MuiSlider: {
+                thumb: {
+                    color: '#191170',
+                },
+                track: {
+                    color: 'white'
+                },
+                rail: {
+                    color: '#191170'
+                },
+                root: {
+                    width: 280,
+                },
+            }
+        }
+    })
 
     const handleChange = (event, value) => {
         setScreenTime(value);
@@ -63,11 +82,12 @@ const Screentime = ({diary, handleUpdate}) => {
 
 
     return(
-        <div>
-        <p>Screentime </p>
+        <div className="slidercenter">
+        {/* <p>Screentime </p> */}
             <Typography id="discrete-slider" gutterBottom>
                 How many hours have you spent in front of a screen ?
             </Typography>
+            <ThemeProvider theme={sliderTheme}>
             <Slider
                 onChange= {handleSlide}
                 defaultValue={screenTime}
@@ -76,12 +96,14 @@ const Screentime = ({diary, handleUpdate}) => {
                 step={0.5}
                 marks
                 min={0}
-                max={12}
-            />
+                max={12}   
+                color='#191170'
+                />
+            </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
                
-            <button onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
+            <button className="navbuttons" onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
             </form>  
         
     </div>
