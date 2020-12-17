@@ -500,34 +500,34 @@ public class DataLoader implements ApplicationRunner {
 
         //16
 
-//        DiaryEntry entry16 = new DiaryEntry("16/12/20");
-//        diaryEntryRepository.save(entry16);
-//
-//        Breathing breathe16 = new Breathing(8, entry16);
-//        breathingRepository.save(breathe16);
-//        entry16.setBreathing(breathe16);
-//
-//        Sleep sleepTest16 = new Sleep(5, entry16);
-//        sleepRepository.save(sleepTest16);
-//        entry16.setSleep(sleepTest16);
-//
-//        Meditation med16 = new Meditation(0, entry16);
-//        meditationRepository.save(med16);
-//        entry16.setMeditation(med16);
-//
-//        ScreenTime screenTime16 = new ScreenTime(10, entry16);
-//        screenTimeRepository.save(screenTime16);
-//        entry16.setScreenTime(screenTime16);
-//
-//        WaterIntake water16 = new WaterIntake(1.75, entry16);
-//        waterIntakeRepository.save(water16);
-//        entry16.setWaterIntake(water16);
-//
-//        Journal journal16 = new Journal("Today was a bad day but I am happy", entry16);
-//        journalEntryRepository.save(journal16);
-//        entry16.setJournal(journal16);
-//
-//        diaryEntryRepository.save(entry16);
+        DiaryEntry entry16 = new DiaryEntry("16/12/20");
+        diaryEntryRepository.save(entry16);
+
+        Breathing breathe16 = new Breathing(8, entry16);
+        breathingRepository.save(breathe16);
+        entry16.setBreathing(breathe16);
+
+        Sleep sleepTest16 = new Sleep(5, entry16);
+        sleepRepository.save(sleepTest16);
+        entry16.setSleep(sleepTest16);
+
+        Meditation med16 = new Meditation(0, entry16);
+        meditationRepository.save(med16);
+        entry16.setMeditation(med16);
+
+        ScreenTime screenTime16 = new ScreenTime(10, entry16);
+        screenTimeRepository.save(screenTime16);
+        entry16.setScreenTime(screenTime16);
+
+        WaterIntake water16 = new WaterIntake(1.75, entry16);
+        waterIntakeRepository.save(water16);
+        entry16.setWaterIntake(water16);
+
+        Journal journal16 = new Journal("Today was a bad day but I am happy", entry16);
+        journalEntryRepository.save(journal16);
+        entry16.setJournal(journal16);
+
+        diaryEntryRepository.save(entry16);
 
         //17
 

@@ -63,7 +63,8 @@ const handleUpdate = (property, value) => {
          
               <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
               <Route path="/new" component={DiaryForm}/>
-              <Route path="/journal" component={Journal}/>
+              <Route path="/journal" render={(props)=> <Journal {...props} diary={diaryEntry[diaryEntry.length -1]} handleUpdate={handleUpdate}/>}/>
+              {/* component={Journal} diaryEntry={diaryEntry} handleUpdate={handleUpdate} */}
               <Route path="/activities" component={Activities}/>
               {/* <Route path="/mystats" component={Stats}/> */}
               <Route path="/meditate" component={Meditate}/>

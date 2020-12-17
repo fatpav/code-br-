@@ -45,20 +45,20 @@ const StartScreen = ({diaryEntry, handleUpdate}) =>{
 
     return (
         <>
-                <div class="navbar">
+              <div class="navbar">
                 <ThumbUpOutline size={52}/>
-                </div>
-                <div class="navbar">
+              </div>
+              <div class="navbar">
                 <h1>Let's start the day right!</h1>
-                </div>
+              </div>
 
 
-        <div class="navbar">
-        <form onSubmit={submitForm} >
-            <input type="text" value={today} />
-            <button class="navbuttons"type="submit">Create New Diary Entry</button>
-            </form>  
-        </div>
+          <div class="navbar">
+          <form onSubmit={submitForm} >
+              <input type="text" value={today} />
+              <button class="navbuttons"type="submit">Create New Diary Entry</button>
+              </form>  
+          </div>
 
         {/* <div>
         <audio class="audio-element">
