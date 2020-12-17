@@ -36,7 +36,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     color: '#191170'
                 },
                 root: {
-                    width: 280,
+                    width: 650,
                 },
             }
         }
@@ -84,7 +84,7 @@ const WaterIntake = ({diary, handleUpdate}) => {
         <div className="slidercenter">
             {/* <p>Water Intake </p> */}
                 <Typography id="discrete-slider" gutterBottom>
-                    How much water have you drank? (Litres)
+                    Water (litres)
                 </Typography>
                 <ThemeProvider theme={sliderTheme}>
                 <Slider

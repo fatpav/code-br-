@@ -3686,8 +3686,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
 >>>>>>> database_charts
+<<<<<<< HEAD
 2020-12-17 14:31:11 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/pauldonegan/Desktop/codeclan/codeclan_work/Final_project/code-br-/code_br_server_side/db/codebreak_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2020-12-17 16:42:14 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/stevenmcfarlane/Desktop/codeclan/codeclan_work/FINAL_PROJECT/code_br_server_side/db/codebreak_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> moreStylingOfSliders
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -3717,6 +3722,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
@@ -3726,11 +3732,23 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/pauldonegan/Desktop/codeclan/codeclan_work/Final_project/code-br-/code_br_server_side/db/codebreak_db.mv.db [1.4.200/7]
+=======
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/stevenmcfarlane/Desktop/codeclan/codeclan_work/FINAL_PROJECT/code_br_server_side/db/codebreak_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/stevenmcfarlane/Desktop/codeclan/codeclan_work/FINAL_PROJECT/code_br_server_side/db/codebreak_db.mv.db [1.4.200/7]
+>>>>>>> moreStylingOfSliders
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
 	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
 	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
 	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
@@ -4023,5 +4041,12 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
 	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
 	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1165)
+=======
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1107)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+>>>>>>> moreStylingOfSliders
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more

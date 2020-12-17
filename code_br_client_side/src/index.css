@@ -37,6 +37,10 @@ body {
 .navbar{
   display: flex;
   justify-content: center;
+  /* position: absolute;
+  top: 625px;
+  left: 590px; */
+
 }
 
 .soundcloudbar{
@@ -130,6 +134,12 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
 }
 
 .chartholder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sliderholder{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -282,7 +292,9 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px;
+    /* padding: 80px; */
+
   }
 
 .detail-list{

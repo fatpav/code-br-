@@ -39,7 +39,7 @@ const Sleep = ({ diary, handleUpdate}) => {
                     color: '#191170'
                 },
                 root: {
-                    width: 280,
+                    width: 650,
                 },
             }
         }
@@ -87,7 +87,7 @@ const Sleep = ({ diary, handleUpdate}) => {
             <div className="slidercenter">
                 {/* <p>How many hours sleep did you get?</p> */}
                 <Typography id="discrete-slider" gutterBottom>
-                How many hours sleep did you get?
+                Sleep (hours)
                     {/* <MoonOutline /> */}
                 </Typography>
                 <ThemeProvider theme={sliderTheme}>

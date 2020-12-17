@@ -37,7 +37,7 @@ const Meditation = ({diary, handleUpdate}) => {
                     color: '#191170'
                 },
                 root: {
-                    width: 280,
+                    width: 650,
                 },
             }
         }
@@ -87,7 +87,7 @@ const Meditation = ({diary, handleUpdate}) => {
         <div className="slidercenter">
             {/* <p>Meditation</p> */}
                 <Typography id="discrete-slider" gutterBottom>
-                    How long have you practiced?
+                    Meditation (minutes)
                 </Typography>
                 <ThemeProvider theme={sliderTheme}>
                 <Slider

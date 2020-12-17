@@ -126,16 +126,7 @@ const Tracker = ({ diaryEntry }) => {
     <>
       <h2>Tracker</h2>
       <div class="chartholder" >
-        <div className="chart">
-          <Chart
-            chartType="LineChart"
-            width="100%"
-            height="200px"
-            data={data}
-            options={options}
-          />
-        </div>
-        <div className="chart">
+      <div className="chart">
           <Chart
             chartType="LineChart"
             width="100%"
@@ -144,13 +135,24 @@ const Tracker = ({ diaryEntry }) => {
             options={sleepOptions}
           />
         </div>
-        <div className="chart">
+        <div 
+          className="chart">
           <Chart
             chartType="LineChart"
             width="100%"
             height="200px"
             data={screenTimeData}
             options={screenTimeOptions}
+          />
+        </div>
+        <div 
+          className="chart">
+          <Chart
+            chartType="LineChart"
+            width="100%"
+            height="200px"
+            data={data}
+            options={options}
           />
         </div>
         <div className="chart">
