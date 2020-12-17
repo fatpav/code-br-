@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Slider, Typography } from '@material-ui/core';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
@@ -71,7 +70,7 @@ const Meditation = ({diary, handleUpdate}) => {
 
     return (
         <div className="slidercenter">
-            <p>Meditation</p>
+            {/* <p>Meditation</p> */}
                 <Typography id="discrete-slider" gutterBottom>
                     How long have you practiced?
                 </Typography>
@@ -90,7 +89,7 @@ const Meditation = ({diary, handleUpdate}) => {
                 </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
-            <button className="navbuttons" type="submit">Add Entry</button>
+                    <button className="navbuttons" type="submit">Add Entry</button>
             </form>  
       </div>
         

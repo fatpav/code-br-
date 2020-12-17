@@ -69,7 +69,7 @@ const Screentime = ({diary, handleUpdate}) => {
 
     return(
         <div className="slidercenter">
-        <p>Screentime </p>
+        {/* <p>Screentime </p> */}
             <Typography id="discrete-slider" gutterBottom>
                 How many hours have you spent in front of a screen ?
             </Typography>
@@ -88,7 +88,7 @@ const Screentime = ({diary, handleUpdate}) => {
             />
             <form 
                 onSubmit={submitForm} >
-            <button className="navbuttons" type="submit">Add Entry</button>
+                    <button className="navbuttons" type="submit">Add Entry</button>
             </form>  
         
     </div>

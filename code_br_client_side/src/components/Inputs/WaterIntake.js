@@ -1,8 +1,30 @@
-import {useState} from 'react';
-import {Slider, Typography} from '@material-ui/core';
+import { useState } from 'react';
+import { Slider, Typography } from '@material-ui/core';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
+import { MoonOutline } from "heroicons-react";
 
 const WaterIntake = ({diary, handleUpdate}) => {
+
+    const sliderTheme = createMuiTheme({
+        overrides: {
+            MuiSlider: {
+                thumb: {
+                    color: '#191170',
+                },
+                track: {
+                    color: 'white'
+                },
+                rail: {
+                    color: '#191170'
+                },
+                root: {
+                    width: 280,
+                },
+            }
+        }
+    })
 
     const [waterIntake, setWaterIntake] = useState(0)
    
@@ -47,11 +69,12 @@ const WaterIntake = ({diary, handleUpdate}) => {
 
 
     return (
-        <div>
-            <p>Water Intake </p>
+        <div className="slidercenter">
+            {/* <p>Water Intake </p> */}
                 <Typography id="discrete-slider" gutterBottom>
                     How much water have you drank? (Litres)
                 </Typography>
+                <ThemeProvider theme={sliderTheme}>
                 <Slider
                     defaultValue={waterIntake}
                     aria-labelledby="discrete-slider"
@@ -60,10 +83,13 @@ const WaterIntake = ({diary, handleUpdate}) => {
                     marks
                     min={0}
                     max={5}
+                    onChange={handleChange}
+                    color='#191170'
                 />
+                </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
-            <button type="submit">Add Entry</button>
+                    <button className="navbuttons" type="submit">Add Entry</button>
             </form>  
       </div>
         
