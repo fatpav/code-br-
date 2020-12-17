@@ -74,7 +74,7 @@ const Sleep = ({ diary, handleUpdate }) => {
             <div className="slidercenter">
                 <p>How many hours sleep did you get?</p>
                 <Typography id="discrete-slider" gutterBottom>
-                    <MoonOutline />
+                    {/* <MoonOutline /> */}
                 </Typography>
                 <ThemeProvider theme={sliderTheme}>
                     <Slider
@@ -91,7 +91,7 @@ const Sleep = ({ diary, handleUpdate }) => {
                     />
                 </ThemeProvider>
                 <form onSubmit={submitForm} >
-                    <button class="navbuttons" type="submit">Submit Sleep</button>
+                    <button className="navbuttons" type="submit">Add Entry</button>
                 </form>
             </div>
         </>

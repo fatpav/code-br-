@@ -1,8 +1,31 @@
-import {useState} from 'react';
-import {Slider, Typography} from '@material-ui/core';
+
+import { useState } from 'react';
+import { Slider, Typography } from '@material-ui/core';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import axios from 'axios';
+import { MoonOutline } from "heroicons-react";
 
 const Meditation = ({diary, handleUpdate}) => {
+
+    const sliderTheme = createMuiTheme({
+        overrides: {
+            MuiSlider: {
+                thumb: {
+                    color: '#191170',
+                },
+                track: {
+                    color: 'white'
+                },
+                rail: {
+                    color: '#191170'
+                },
+                root: {
+                    width: 280,
+                },
+            }
+        }
+    })
 
     const [meditation, setMeditation] = useState(0)
    
@@ -47,11 +70,12 @@ const Meditation = ({diary, handleUpdate}) => {
 
 
     return (
-        <div>
+        <div className="slidercenter">
             <p>Meditation</p>
                 <Typography id="discrete-slider" gutterBottom>
                     How long have you practiced?
                 </Typography>
+                <ThemeProvider theme={sliderTheme}>
                 <Slider
                     defaultValue={meditation}
                     aria-labelledby="discrete-slider"
@@ -60,10 +84,13 @@ const Meditation = ({diary, handleUpdate}) => {
                     marks
                     min={0}
                     max={60}
+                    onChange={handleChange}
+                    color='#191170'
                 />
+                </ThemeProvider>
             <form 
                 onSubmit={submitForm} >
-            <button type="submit">Add Entry</button>
+            <button className="navbuttons" type="submit">Add Entry</button>
             </form>  
       </div>
         
