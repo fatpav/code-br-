@@ -55,7 +55,7 @@ const StartScreen = ({diaryEntry, handleUpdate}) =>{
 
           <div class="navbar">
           <form onSubmit={submitForm} >
-              <input type="text" value={today} />
+              <input type="text" value={today} hidden />
               <button class="navbuttons"type="submit">Create New Diary Entry</button>
               </form>  
           </div>

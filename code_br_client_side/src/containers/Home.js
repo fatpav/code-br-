@@ -17,6 +17,7 @@ import WaterIntake from '../components/Inputs/WaterIntake';
 import Screentime from '../components/Inputs/Screentime';
 import Loading from '../components/Loading';
 import DiaryForm from "../components/Inputs/DiaryForm";
+import HomeScreen from "../components/HomeScreen";
 
 
 const Home = () => {
@@ -60,8 +61,9 @@ const handleUpdate = (property, value) => {
         <h1 class="heading">code&lt;br&gt;</h1>
 
         <Switch>
-         
-              <Route exact path="/" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
+
+              <Route exact path= '/' component={HomeScreen}/>
+              <Route path="/startscreen" render={(props)=> <StartScreen {...props} diaryEntry={diaryEntry} handleUpdate={handleUpdate}/>}/>
               <Route path="/new" component={DiaryForm}/>
               <Route path="/journal" render={(props)=> <Journal {...props} diary={diaryEntry[diaryEntry.length -1]} handleUpdate={handleUpdate}/>}/>
               {/* component={Journal} diaryEntry={diaryEntry} handleUpdate={handleUpdate} */}

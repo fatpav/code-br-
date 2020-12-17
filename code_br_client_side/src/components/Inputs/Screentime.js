@@ -5,7 +5,23 @@ import axios from 'axios';
 
 const Screentime = ({diary, handleUpdate}) => {
 
-    const [screenTime, setScreenTime] = useState(0)
+    const [screenTime, setScreenTime] = useState(0);
+    const [buttonText, setButtonText] = useState("Add Entry");
+    const [disabled, setDisabled] = useState(false)
+   
+   
+    function buttonChange() {
+        if(disabled === false){
+           setButtonText("Submitted")
+           setDisabled(true)
+        }
+   };
+
+   function handleSlide() {
+           setButtonText("Update Entry")
+           setDisabled(false)
+   };
+
    
 
     const handleChange = (event, value) => {
@@ -53,6 +69,7 @@ const Screentime = ({diary, handleUpdate}) => {
                 How many hours have you spent in front of a screen ?
             </Typography>
             <Slider
+                onChange= {handleSlide}
                 defaultValue={screenTime}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -63,7 +80,8 @@ const Screentime = ({diary, handleUpdate}) => {
             />
             <form 
                 onSubmit={submitForm} >
-            <button type="submit">Add Entry</button>
+               
+            <button onClick={buttonChange} disabled={disabled} type="submit">{buttonText}</button>
             </form>  
         
     </div>
