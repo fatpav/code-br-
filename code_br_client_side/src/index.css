@@ -4,18 +4,11 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
-=======
-  background-color: #9fcd80;
->>>>>>> database_charts
   /* background: linear-gradient(138deg, #6a8bbe, #b1e0a5);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 10s ease infinite;
     animation: AnimationName 10s ease infinite; */
-<<<<<<< HEAD
   background-color: #9FCD80;
-=======
->>>>>>> database_charts
     
 }
 
