@@ -20,7 +20,7 @@ const Screentime = ({diary, handleUpdate}) => {
                     color: '#191170'
                 },
                 root: {
-                    width: 280,
+                    width: 650,
                 },
             }
         }
@@ -71,7 +71,7 @@ const Screentime = ({diary, handleUpdate}) => {
         <div className="slidercenter">
         {/* <p>Screentime </p> */}
             <Typography id="discrete-slider" gutterBottom>
-                How many hours have you spent in front of a screen ?
+                Screen-time (hours)
             </Typography>
             <ThemeProvider theme={sliderTheme}>
             <Slider
