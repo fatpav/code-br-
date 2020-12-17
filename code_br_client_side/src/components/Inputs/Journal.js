@@ -52,6 +52,8 @@ const Journal = ({diary, handleUpdate}) => {
                 <input onChange={handleChange} type="text" id="inputbox" placeholder="How did you feel today?" />
             </div>
             <div class="navbar">
+                {/* IF DIARYENTRY.JOURNAL ? EDIT : ADD */}
+                
                 <form
                     onSubmit={submitForm} >
                 <button class="navbuttons" type="submit">Add Entry</button>
