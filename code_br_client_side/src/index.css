@@ -299,5 +299,10 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
 .detail-list{
   list-style: none;
 }
+
+.timerSeconds{
+  text-align: center;
+  margin-bottom: 5px;
+}
   
 

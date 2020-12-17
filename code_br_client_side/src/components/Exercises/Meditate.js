@@ -9,6 +9,7 @@ const Meditate = () => {
 
     return (
         <>
+            
             <h2>Meditate</h2>
             <div class="soundcloudbar">
                 <iframe width="25%" height="20" scrolling="no" frameborder="no" allow="auto_play"

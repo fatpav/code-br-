@@ -28,8 +28,11 @@ const Timer = () => {
 
 
   return (
+      <>
+        <div class="timerSeconds">
+             Timer: 00: {seconds}'s
+        </div>
           <div className="navbar">
-                {seconds}s
             <button className={`navbuttons button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
                 {isActive ? 'Pause' : 'Start'}
             </button>
@@ -37,7 +40,8 @@ const Timer = () => {
                 Reset
             </button>
         
-    </div>
+        </div>
+    </>
   );
 };
 
