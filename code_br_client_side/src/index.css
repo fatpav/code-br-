@@ -139,7 +139,7 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
   justify-content: center;
 }
 
-.sliderholder{
+.sliderholder, timerholder{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,7 +148,6 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
 .chart{
   width: 48vw;
 }
-
 
 
 #inputbox{
@@ -300,4 +299,10 @@ text-shadow: 1px 3px 0 #969696, 1px 7px 5px #aba8a8;
 .detail-list{
   list-style: none;
 }
+
+.timerSeconds{
+  text-align: center;
+  margin-bottom: 5px;
+}
   
+
