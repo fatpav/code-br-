@@ -7,12 +7,12 @@ const Tracker = ({ diaryEntry }) => {
 
   const data = [
     ["Date", "Litres"],
+    [diaryEntry[10].date, diaryEntry[10].waterIntake.litres],
     [diaryEntry[11].date, diaryEntry[11].waterIntake.litres],
     [diaryEntry[12].date, diaryEntry[12].waterIntake.litres],
     [diaryEntry[13].date, diaryEntry[13].waterIntake.litres],
     [diaryEntry[14].date, diaryEntry[14].waterIntake.litres],
     [diaryEntry[15].date, diaryEntry[15].waterIntake.litres],
-    [diaryEntry[16].date, diaryEntry[16].waterIntake.litres],
     [diaryEntry[diaryEntry.length -1].date, diaryEntry[diaryEntry.length -1].waterIntake.litres]
   ];
 
@@ -37,12 +37,12 @@ const Tracker = ({ diaryEntry }) => {
 
   const sleepData = [
     ["Date", "Hours"],
+    [diaryEntry[10].date, diaryEntry[10].sleep.hours],
     [diaryEntry[11].date, diaryEntry[11].sleep.hours],
     [diaryEntry[12].date, diaryEntry[12].sleep.hours],
     [diaryEntry[13].date, diaryEntry[13].sleep.hours],
     [diaryEntry[14].date, diaryEntry[14].sleep.hours],
     [diaryEntry[15].date, diaryEntry[15].sleep.hours],
-    [diaryEntry[16].date, diaryEntry[16].sleep.hours],
     [diaryEntry[diaryEntry.length -1].date, diaryEntry[diaryEntry.length -1].sleep.hours]
   ];
 
@@ -67,12 +67,12 @@ const Tracker = ({ diaryEntry }) => {
 
   const screenTimeData = [
     ["Date", "Hours"],
-    [diaryEntry[11].date, diaryEntry[0].screenTime.hours],
-    [diaryEntry[12].date, diaryEntry[1].screenTime.hours],
-    [diaryEntry[13].date, diaryEntry[2].screenTime.hours],
-    [diaryEntry[14].date, diaryEntry[3].screenTime.hours],
-    [diaryEntry[15].date, diaryEntry[4].screenTime.hours],
-    [diaryEntry[16].date, diaryEntry[5].screenTime.hours],
+    [diaryEntry[10].date, diaryEntry[10].screenTime.hours],
+    [diaryEntry[11].date, diaryEntry[11].screenTime.hours],
+    [diaryEntry[12].date, diaryEntry[12].screenTime.hours],
+    [diaryEntry[13].date, diaryEntry[13].screenTime.hours],
+    [diaryEntry[14].date, diaryEntry[14].screenTime.hours],
+    [diaryEntry[15].date, diaryEntry[15].screenTime.hours],
     [diaryEntry[diaryEntry.length -1].date, diaryEntry[diaryEntry.length -1].screenTime.hours]
   ];
 
@@ -97,12 +97,12 @@ const Tracker = ({ diaryEntry }) => {
 
   const meditationData = [
     ["Date", "Minutes"],
+    [diaryEntry[10].date, diaryEntry[10].meditation.minutes],
     [diaryEntry[11].date, diaryEntry[11].meditation.minutes],
     [diaryEntry[12].date, diaryEntry[12].meditation.minutes],
     [diaryEntry[13].date, diaryEntry[13].meditation.minutes],
     [diaryEntry[14].date, diaryEntry[14].meditation.minutes],
     [diaryEntry[15].date, diaryEntry[15].meditation.minutes],
-    [diaryEntry[16].date, diaryEntry[16].meditation.minutes],
     [diaryEntry[diaryEntry.length -1].date, diaryEntry[diaryEntry.length -1].meditation.minutes]
   ];
 

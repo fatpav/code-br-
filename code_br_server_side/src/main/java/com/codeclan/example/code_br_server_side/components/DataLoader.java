@@ -33,35 +33,35 @@ public class DataLoader implements ApplicationRunner {
 //        User user1 = new User("Json", "Jsonson", 33);
 //        userRepository.save(user1);
 
-
-        DiaryEntry entry1 = new DiaryEntry("01/12/20");
-        diaryEntryRepository.save(entry1);
-
-        Breathing breathe1 = new Breathing(10, entry1);
-        breathingRepository.save(breathe1);
-        entry1.setBreathing(breathe1);
-
-        Sleep sleepTest1 = new Sleep(8, entry1);
-        sleepRepository.save(sleepTest1);
-        entry1.setSleep(sleepTest1);
-
-        Meditation med1 = new Meditation(10, entry1);
-        meditationRepository.save(med1);
-        entry1.setMeditation(med1);
-
-        ScreenTime screenTime1 = new ScreenTime(8, entry1);
-        screenTimeRepository.save(screenTime1);
-        entry1.setScreenTime(screenTime1);
-
-        WaterIntake water1 = new WaterIntake(1.5, entry1);
-        waterIntakeRepository.save(water1);
-        entry1.setWaterIntake(water1);
-
-        Journal journal1 = new Journal("Today was a good day", entry1);
-        journalEntryRepository.save(journal1);
-        entry1.setJournal(journal1);
-
-        diaryEntryRepository.save(entry1);
+//
+//        DiaryEntry entry1 = new DiaryEntry("01/12/20");
+//        diaryEntryRepository.save(entry1);
+//
+//        Breathing breathe1 = new Breathing(10, entry1);
+//        breathingRepository.save(breathe1);
+//        entry1.setBreathing(breathe1);
+//
+//        Sleep sleepTest1 = new Sleep(8, entry1);
+//        sleepRepository.save(sleepTest1);
+//        entry1.setSleep(sleepTest1);
+//
+//        Meditation med1 = new Meditation(10, entry1);
+//        meditationRepository.save(med1);
+//        entry1.setMeditation(med1);
+//
+//        ScreenTime screenTime1 = new ScreenTime(8, entry1);
+//        screenTimeRepository.save(screenTime1);
+//        entry1.setScreenTime(screenTime1);
+//
+//        WaterIntake water1 = new WaterIntake(1.5, entry1);
+//        waterIntakeRepository.save(water1);
+//        entry1.setWaterIntake(water1);
+//
+//        Journal journal1 = new Journal("Today was a good day", entry1);
+//        journalEntryRepository.save(journal1);
+//        entry1.setJournal(journal1);
+//
+//        diaryEntryRepository.save(entry1);
 
         //2
 
@@ -511,7 +511,7 @@ public class DataLoader implements ApplicationRunner {
         sleepRepository.save(sleepTest16);
         entry16.setSleep(sleepTest16);
 
-        Meditation med16 = new Meditation(0, entry16);
+        Meditation med16 = new Meditation(15, entry16);
         meditationRepository.save(med16);
         entry16.setMeditation(med16);
 
@@ -531,34 +531,34 @@ public class DataLoader implements ApplicationRunner {
 
         //17
 
-//        DiaryEntry entry17 = new DiaryEntry("17/12/20");
-//        diaryEntryRepository.save(entry17);
-//
-//        Breathing breathe17 = new Breathing(16, entry17);
-//        breathingRepository.save(breathe17);
-//        entry17.setBreathing(breathe17);
-//
-//        Sleep sleepTest17 = new Sleep(4, entry17);
-//        sleepRepository.save(sleepTest17);
-//        entry17.setSleep(sleepTest17);
-//
-//        Meditation med17 = new Meditation(10, entry17);
-//        meditationRepository.save(med17);
-//        entry17.setMeditation(med17);
-//
-//        ScreenTime screenTime17 = new ScreenTime(11, entry17);
-//        screenTimeRepository.save(screenTime17);
-//        entry17.setScreenTime(screenTime17);
-//
-//        WaterIntake water17 = new WaterIntake(0.75, entry17);
-//        waterIntakeRepository.save(water17);
-//        entry17.setWaterIntake(water17);
-//
-//        Journal journal17 = new Journal("Today was just another day", entry17);
-//        journalEntryRepository.save(journal17);
-//        entry17.setJournal(journal17);
-//
-//        diaryEntryRepository.save(entry17);
+        DiaryEntry entry17 = new DiaryEntry("17/12/20");
+        diaryEntryRepository.save(entry17);
+
+        Breathing breathe17 = new Breathing(16, entry17);
+        breathingRepository.save(breathe17);
+        entry17.setBreathing(breathe17);
+
+        Sleep sleepTest17 = new Sleep(4, entry17);
+        sleepRepository.save(sleepTest17);
+        entry17.setSleep(sleepTest17);
+
+        Meditation med17 = new Meditation(10, entry17);
+        meditationRepository.save(med17);
+        entry17.setMeditation(med17);
+
+        ScreenTime screenTime17 = new ScreenTime(11, entry17);
+        screenTimeRepository.save(screenTime17);
+        entry17.setScreenTime(screenTime17);
+
+        WaterIntake water17 = new WaterIntake(0.75, entry17);
+        waterIntakeRepository.save(water17);
+        entry17.setWaterIntake(water17);
+
+        Journal journal17 = new Journal("Today was just another day", entry17);
+        journalEntryRepository.save(journal17);
+        entry17.setJournal(journal17);
+
+        diaryEntryRepository.save(entry17);
 
         //18
 
